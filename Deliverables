@@ -1,0 +1,6 @@
+Please submit the following items by Thursday, August 23, 2018.
+•	The source code for your program.
+•	The set of test cases you used to ensure that your program satisfies its requirements. (Please provide a Readme file with instructions on how to exercise the tests, and any information regarding the status of the program, e.g., “The program does not work correctly under these conditions…”). 
+•	A report showing the results from using a static analysis tool and code improvements you made to address some (or all) of the issues reported.
+•	A report showing the final code coverage achieved. 
+
