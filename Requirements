@@ -1,0 +1,16 @@
+Requirements
+
+-create a program that prints out the legal moves for a piece on a given chessboard configuration
+
+-I need to first develop the code, then use a static anaylsis tool identify any
+potential defect before testing
+
+-develop test cases for your program and collect code coverage data to determine
+adequacy of the test
+
+-The program needs to take a board configuration that contains the position of white pieces, the position of black bieces, and the selected piece that needs to
+to be moved
+
+-the output should be as follows
+	Legal moves for Rf1: e1,d1,c1,b1,a1
+-
