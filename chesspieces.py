@@ -16,7 +16,7 @@ class PIECES(Enum):
     N=5
     P=6
 
-class ROWS(Enum): #change to Columns
+class COLUMNS(Enum): #change to Columns
     a=0
     b=1
     c=2
@@ -35,22 +35,22 @@ class ChessPiece():
         plsplit = list(PieceLocation)
         self.y = int(plsplit[2])
         self.side = side.value
-        if(ROWS.a.name is plsplit[1]):
-            self.x = ROWS.a.value
-        elif(ROWS.b.name is plsplit[1]):
-            self.x = ROWS.b.value
-        elif(ROWS.c.name is plsplit[1]):
-            self.x = ROWS.c.value
-        elif(ROWS.d.name is plsplit[1]):
-            self.x = ROWS.d.value
-        elif(ROWS.e.name is plsplit[1]):
-            self.x = ROWS.e.value
-        elif(ROWS.f.name is plsplit[1]):
-            self.x = ROWS.f.value
-        elif(ROWS.g.name is plsplit[1]):
-            self.x = ROWS.g.value
-        elif(ROWS.h.name is plsplit[1]):
-            self.x = ROWS.h.value
+        if(COLUMNS.a.name is plsplit[1]):
+            self.x = COLUMNS.a.value
+        elif(COLUMNS.b.name is plsplit[1]):
+            self.x = COLUMNS.b.value
+        elif(COLUMNS.c.name is plsplit[1]):
+            self.x = COLUMNS.c.value
+        elif(COLUMNS.d.name is plsplit[1]):
+            self.x = COLUMNS.d.value
+        elif(COLUMNS.e.name is plsplit[1]):
+            self.x = COLUMNS.e.value
+        elif(COLUMNS.f.name is plsplit[1]):
+            self.x = COLUMNS.f.value
+        elif(COLUMNS.g.name is plsplit[1]):
+            self.x = COLUMNS.g.value
+        elif(COLUMNS.h.name is plsplit[1]):
+            self.x = COLUMNS.h.value
         if(PIECES.K.name is plsplit[0]):
             self.PieceType = PIECES.K.value
         elif(PIECES.Q.name is plsplit[0]):
