@@ -30,6 +30,19 @@ CHESSBOARD = [['A8','B8','C8','D8','E8','F8','G8','H8'],#0
               ['A2','B2','C2','D2','E2','F2','G2','H2'],#6
               ['A1','B1','C1','D1','E1','F1','G1','H1']]#7
                 #0   1    2     3    4    5    6    7
+def InRange(cord):
+    if cord >= 0 and cord <= 7 :
+        return True
+    return False
+def InPieceList(side, unit):
+    if side is 1:
+        if unit in WhitePieces:
+            return True
+        return False
+    else:
+        if unit in BlackPieces:
+            return True
+        return False
 
 def GiveColumnNumber(letter):
     if(COLUMNS.a.name is letter):
@@ -58,9 +71,7 @@ def validate(string,option =1):
 
 
 def Main():
-        WhitePieces =args.white.split(',')
-        BlackPieces = args.black.split(',')
-        PieceToMove = list(args.piece)
+
         for piece in WhitePieces:
             plsplit = list(piece)
             CHESSBOARD[8-int(plsplit[2])][GiveColumnNumber(plsplit[1])]=piece
@@ -74,8 +85,10 @@ def Main():
         #decide if the piece moving is black or white
         if(args.piece in WhitePieces):
             movement =  1
+            team = movement * -1
         elif(args.piece in BlackPieces):
             movement = -1
+            team = movement * -1
         else:
             raise ValueError("Piece you are trying to move is not white set or black set.")
         #decide its move
@@ -87,12 +100,51 @@ def Main():
             if movement is 1:
                 if 8-y is 6:
                     print(CHESSBOARD[8 - (y + movement + movement)][x],end=" ",flush=True)
+                if CHESSBOARD[7-y][x+1] in BlackPieces:
+                    print(CHESSBOARD[7-y][x+1],end=" ",flush=True)
+                if CHESSBOARD[7-y][x-1] in BlackPieces:
+                    print(CHESSBOARD[7-y][x-1],end=" ",flush=True)
             else:
                 if 8-y is 1:
                     print(CHESSBOARD[8 - (y + movement + movement)][x], end=" ", flush=True)
+                if CHESSBOARD[9-y][x+1] in WhitePieces:
+                    print(CHESSBOARD[9-y][x+1],end=" ",flush=True)
+                if CHESSBOARD[9-y][x-1] in WhitePieces:
+                    print(CHESSBOARD[9-y][x-1],end=" ",flush=True)
             if 8-(y+movement) > 0:
-                print(CHESSBOARD[8-(y+movement)][x],end=" ",flush=True)
+                if CHESSBOARD[8-(y+movement)][x] not in WhitePieces and CHESSBOARD[8-(y+movement)][x] not in BlackPieces:
+                    print(CHESSBOARD[8-(y+movement)][x],end=" ",flush=True)
         #knight
+        elif PieceToMove[0] is PIECES.N.name:
+            if InRange(8 - (y + (movement * 2))):
+                if InRange(x+1):
+                    if InPieceList(team,CHESSBOARD[8 - (y + (movement * 2))] [x + 1]) is False:
+                        print(CHESSBOARD[8 - (y + (movement * 2))] [x + 1],end=" ",flush=True)
+                if InRange(x-1):
+                    if InPieceList(team,CHESSBOARD[8 - (y + (movement * 2))] is False):
+                        print(CHESSBOARD[8 - (y + (movement * 2))] [x - 1],end=" ",flush=True)
+            if InRange(8 - (y + (movement * -2))):
+                if InRange(x + 1):
+                    if InPieceList(team,CHESSBOARD[8 - (y + (movement * -2))][x + 1]) is False:
+                        print(CHESSBOARD[8 - (y + (movement * -2))][x + 1],end=" ",flush=True)
+                if InRange(x - 1):
+                    if InPieceList(team, CHESSBOARD[8 - (y + (movement * -2))][x - 1]) is False:
+                        print(CHESSBOARD[8 - (y + (movement * -2))][x - 1],end=" ",flush=True)
+            if InRange(8 - (y + (movement * 1))) :
+                if InRange(x - 2):
+                    if InPieceList(team,CHESSBOARD[8 - (y + (movement * 1))] [x - 2]) is False:
+                        print(CHESSBOARD[8 - (y + (movement * 1))] [x - 2],end=" ",flush=True)
+                if InRange(x +2):
+                    if InPieceList(team, CHESSBOARD[8 - (y + (movement * 1))][x + 2]) is False:
+                        print(CHESSBOARD[8 - (y + (movement * 1))] [x + 2],end=" ",flush=True)
+            if InRange(8 - (y + (movement * -1))):
+                if InRange(x + 2):
+                    if InPieceList(team,CHESSBOARD[8 - (y + (movement * -1))][x + 2]) is False:
+                        print(CHESSBOARD[8 - (y + (movement * -1))][x + 2],end=" ",flush=True)
+                if InRange(x - 2):
+                    if InPieceList(team, CHESSBOARD[8 - (y + (movement * -1))][x - 2]) is False:
+                        print(CHESSBOARD[8 - (y + (movement * -1))][x - 2],end=" ",flush=True)
+
 
         
         
@@ -112,6 +164,9 @@ if __name__ == "__main__":
     MovingPiece=validate(args.piece,1)
 
     if WhiteSet is not None and BlackSet is not None and MovingPiece is not None:
+        WhitePieces =args.white.split(',')
+        BlackPieces = args.black.split(',')
+        PieceToMove = list(args.piece)
         Main()
     else:
         raise ValueError("One of the paramaters was out of format")
