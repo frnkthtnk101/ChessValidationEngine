@@ -104,6 +104,18 @@ def BishopMovement(x,y,xincrement,yincrement,yourteam,enemyteam):
             return CHESSBOARD[y+yincrement][x+xincrement]+' '+BishopMovement(x+xincrement,y+yincrement,xincrement,yincrement,yourteam,enemyteam)
     else:
         return ''
+
+def KingMovement(x,y,yourteam,enemyteam,point = 0):
+    increment = [[1,1],[1,-1],[-1,1],[-1,-1]]
+    if point < 4:
+        if InRange(x+increment[point][0]) and InRange(y+increment[point][1]):
+            if InPieceList(yourteam,CHESSBOARD[y+increment[point][1]][x+increment[point][0]]):
+                return KingMovement(x,y,yourteam,enemyteam,point+1)
+            else:
+                return CHESSBOARD[y+increment[point][1]][x+increment[point][0]]+' '+KingMovement(x,y,yourteam,enemyteam,point+1)
+        else:
+            return KingMovement(x, y, yourteam,enemyteam,point + 1)
+
 def Main():
 
         for piece in WhitePieces:
@@ -199,7 +211,9 @@ def Main():
             print(BishopMovement(x, y, -1, 1, movement, team), end=' ', flush=True)
             print(BishopMovement(x, y, -1, -1, movement, team), end=' ', flush=True)
         elif PieceToMove[0] is PIECES.K.name:
-            
+            print(KingMovement(x,y,movement,team))
+
+
 
 
 
