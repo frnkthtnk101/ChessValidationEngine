@@ -21,14 +21,14 @@ class PIECES(Enum):
     P=6
 
 
-CHESSBOARD = [['A8','B8','C8','D8','E8','F8','G8','H8'],#0
-              ['A7','B7','C7','D7','E7','F7','G7','H7'],#1
-              ['A6','B6','C6','D6','E6','F6','G6','H6'],#2
-              ['A5','B5','C5','D5','E5','F5','G5','H5'],#3`
-              ['A4','B4','C4','D4','E4','F4','G4','H4'],#4
-              ['A3','B3','C3','D3','E3','F3','G3','H3'],#5
-              ['A2','B2','C2','D2','E2','F2','G2','H2'],#6
-              ['A1','B1','C1','D1','E1','F1','G1','H1']]#7
+CHESSBOARD = [['a8','b8','c8','d8','e8','f8','g8','h8'],#0
+              ['a7','b7','c7','d7','e7','f7','g7','h7'],#1
+              ['a6','b6','c6','d6','e6','f6','g6','h6'],#2
+              ['a5','b5','c5','d5','e5','f5','g5','h5'],#3`
+              ['a4','b4','c4','d4','e4','f4','g4','h4'],#4
+              ['a3','b3','c3','d3','e3','f3','g3','h3'],#5
+              ['a2','b2','c2','d2','e2','f2','g2','h2'],#6
+              ['a1','b1','c1','d1','e1','f1','g1','h1']]#7
                 #0   1    2     3    4    5    6    7
 def InRange(cord):
     if cord >= 0 and cord <= 7 :
@@ -92,6 +92,18 @@ def RookMovement(x,y,plane,increment,yourteam,enemyteam):
             return ''
     return ''
 
+def BishopMovement(x,y,xincrement,yincrement,yourteam,enemyteam):
+    if InRange(x+xincrement) and InRange(y+yincrement):
+        if InPieceList(yourteam,CHESSBOARD[y+yincrement][x+xincrement]):
+            return ''
+        elif InPieceList(enemyteam,CHESSBOARD[y+yincrement][x+xincrement]):
+            return CHESSBOARD[y+yincrement][x+xincrement]
+        else:
+            h = CHESSBOARD[y][x]
+            d = CHESSBOARD[(y+yincrement)][x+xincrement]
+            return CHESSBOARD[y+yincrement][x+xincrement]+' '+BishopMovement(x+xincrement,y+yincrement,xincrement,yincrement,yourteam,enemyteam)
+    else:
+        return ''
 def Main():
 
         for piece in WhitePieces:
@@ -167,7 +179,28 @@ def Main():
                         print(CHESSBOARD[8 - (y + (movement * -1))][x - 2],end=" ",flush=True)
         #Rook
         elif PieceToMove[0] is PIECES.R.name:
-            print(RookMovement(x,y,'x',1,movement,team),end='',flush=True)
+            print(RookMovement(x,y,'x',1,movement,team),end=' ',flush=True)
+            print(RookMovement(x, y, 'x', -1, movement, team), end=' ', flush=True)
+            print(RookMovement(x, y, 'y', 1, movement, team), end=' ', flush=True)
+            print(RookMovement(x, y, 'y', -1, movement, team), end=' ', flush=True)
+        #Bishop
+        elif PieceToMove[0] is PIECES.B.name:
+            print(BishopMovement(x,y,1,1,movement,team),end=' ',flush=True)
+            print(BishopMovement(x,y,1,-1, movement, team), end=' ', flush=True)
+            print(BishopMovement(x, y, -1, 1, movement, team), end=' ', flush=True)
+            print(BishopMovement(x, y, -1, -1, movement, team), end=' ', flush=True)
+        elif PieceToMove[0] is PIECES.Q.name:
+            print(RookMovement(x,y,'x',1,movement,team),end=' ',flush=True)
+            print(RookMovement(x, y, 'x', -1, movement, team), end=' ', flush=True)
+            print(RookMovement(x, y, 'y', 1, movement, team), end=' ', flush=True)
+            print(RookMovement(x, y, 'y', -1, movement, team), end=' ', flush=True)
+            print(BishopMovement(x,y,1,1,movement,team),end=' ',flush=True)
+            print(BishopMovement(x,y,1,-1, movement, team), end=' ', flush=True)
+            print(BishopMovement(x, y, -1, 1, movement, team), end=' ', flush=True)
+            print(BishopMovement(x, y, -1, -1, movement, team), end=' ', flush=True)
+        elif PieceToMove[0] is PIECES.K.name:
+            
+
 
 
 
