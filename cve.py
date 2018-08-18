@@ -106,8 +106,8 @@ def BishopMovement(x,y,xincrement,yincrement,yourteam,enemyteam):
         return ''
 
 def KingMovement(x,y,yourteam,enemyteam,point = 0):
-    increment = [[1,1],[1,-1],[-1,1],[-1,-1]]
-    if point < 4:
+    increment = [[0,1],[0,-1],[1,0],[1,1],[1,-1],[-1,0],[-1,1],[-1,-1]]
+    if point < len(increment):
         if InRange(x+increment[point][0]) and InRange(y+increment[point][1]):
             if InPieceList(yourteam,CHESSBOARD[y+increment[point][1]][x+increment[point][0]]):
                 return KingMovement(x,y,yourteam,enemyteam,point+1)
@@ -115,6 +115,8 @@ def KingMovement(x,y,yourteam,enemyteam,point = 0):
                 return CHESSBOARD[y+increment[point][1]][x+increment[point][0]]+' '+KingMovement(x,y,yourteam,enemyteam,point+1)
         else:
             return KingMovement(x, y, yourteam,enemyteam,point + 1)
+    else:
+        return ''
 
 def Main():
 
@@ -213,13 +215,6 @@ def Main():
         elif PieceToMove[0] is PIECES.K.name:
             print(KingMovement(x,y,movement,team))
 
-
-
-
-
-
-        
-        
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('white', help = "white pieces [KQRBNP][a-h][1-8],...", type = str)
@@ -242,7 +237,3 @@ if __name__ == "__main__":
         Main()
     else:
         raise ValueError("One of the paramaters was out of format")
-
-
-
-        
