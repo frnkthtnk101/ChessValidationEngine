@@ -69,6 +69,28 @@ def validate(string,option =1):
         regex = r"^([KQRBNP])([a-h])([1-8])$"
     return re.match(regex,string)
 
+def RookMovement(x,y,plane,increment,yourteam,enemyteam):
+    if plane is 'x':
+        if InRange(x+increment):
+            if InPieceList(yourteam,CHESSBOARD[y][x+increment]):
+                return ''
+            elif InPieceList(enemyteam,CHESSBOARD[y][x+increment]):
+                return CHESSBOARD[y][x+increment]
+            else:
+                return CHESSBOARD[y][x+increment]+" "+RookMovement(x+increment,y,plane,increment,yourteam,enemyteam)
+        else:
+            return ''
+    elif plane is 'y':
+        if InRange(y+increment):
+            if InPieceList(yourteam,CHESSBOARD[y+increment][x]):
+                return ''
+            elif InPieceList(enemyteam,CHESSBOARD[y+increment][x]):
+                return CHESSBOARD[y+increment][x]
+            else:
+                return CHESSBOARD[y+increment][x]+" "+RookMovement(x,y+increment,plane,increment,yourteam,enemyteam)
+        else:
+            return ''
+    return ''
 
 def Main():
 
@@ -85,12 +107,11 @@ def Main():
         #decide if the piece moving is black or white
         if(args.piece in WhitePieces):
             movement =  1
-            team = movement * -1
         elif(args.piece in BlackPieces):
             movement = -1
-            team = movement * -1
         else:
             raise ValueError("Piece you are trying to move is not white set or black set.")
+        team = movement * -1
         #decide its move
         x = GiveColumnNumber(PieceToMove[1])
         y = int(PieceToMove[2])
@@ -111,7 +132,7 @@ def Main():
                     print(CHESSBOARD[9-y][x+1],end=" ",flush=True)
                 if CHESSBOARD[9-y][x-1] in WhitePieces:
                     print(CHESSBOARD[9-y][x-1],end=" ",flush=True)
-            if 8-(y+movement) > 0:
+            if InRange(8-(y+movement)):
                 if CHESSBOARD[8-(y+movement)][x] not in WhitePieces and CHESSBOARD[8-(y+movement)][x] not in BlackPieces:
                     print(CHESSBOARD[8-(y+movement)][x],end=" ",flush=True)
         #knight
@@ -144,6 +165,10 @@ def Main():
                 if InRange(x - 2):
                     if InPieceList(team, CHESSBOARD[8 - (y + (movement * -1))][x - 2]) is False:
                         print(CHESSBOARD[8 - (y + (movement * -1))][x - 2],end=" ",flush=True)
+        #Rook
+        elif PieceToMove[0] is PIECES.R.name:
+            print(RookMovement(x,y,'x',1,movement,team),end='',flush=True)
+
 
 
         

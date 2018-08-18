@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="628fd383-50b5-432e-8652-34bd9245b185" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.speicifications.swp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cve.py" beforeDir="false" afterPath="$PROJECT_DIR$/cve.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -11,26 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ChessValidationEngine$cve.coverage" NAME="cve Coverage Results" MODIFIED="1534384840376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-  </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/chesspieces.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="455">
-                    <caret line="80" column="30" lean-forward="true" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
+    <SUITE FILE_PATH="coverage/ChessValidationEngine$cve.coverage" NAME="cve Coverage Results" MODIFIED="1534550837044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1291491187">
@@ -42,12 +24,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="1778" />
+          <entry key="py" value="2350" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="1778" />
+          <entry key="Python" value="2350" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -70,12 +52,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cve.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="109" column="32" lean-forward="true" selection-start-line="109" selection-start-column="32" selection-end-line="109" selection-end-column="32" />
+            <state relative-caret-position="370">
+              <caret line="169" column="74" lean-forward="true" selection-start-line="169" selection-start-column="74" selection-end-line="169" selection-end-column="74" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-                <element signature="e#4055#5388#0" />
-                <marker date="1534384866743" expanded="true" signature="868:1052" ph="..." />
+                <marker date="1534551037192" expanded="true" signature="868:1052" ph="..." />
+                <marker date="1534551037192" expanded="true" signature="1865:2751" ph="..." />
               </folding>
             </state>
           </provider>
@@ -117,8 +99,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="-1280" />
+    <option name="y" value="-224" />
     <option name="width" value="1280" />
-    <option name="height" value="800" />
+    <option name="height" value="1024" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -225,7 +209,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="-1280" y="-224" width="1280" height="1024" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
@@ -239,7 +223,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27945206" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21383648" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39863014" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -288,19 +272,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chesspieces.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="80" column="30" lean-forward="true" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
+        <state relative-caret-position="975">
+          <caret line="65" column="8" lean-forward="true" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cve.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="109" column="32" lean-forward="true" selection-start-line="109" selection-start-column="32" selection-end-line="109" selection-end-column="32" />
+        <state relative-caret-position="370">
+          <caret line="169" column="74" lean-forward="true" selection-start-line="169" selection-start-column="74" selection-end-line="169" selection-end-column="74" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#4055#5388#0" />
-            <marker date="1534384866743" expanded="true" signature="868:1052" ph="..." />
+            <marker date="1534551037192" expanded="true" signature="868:1052" ph="..." />
+            <marker date="1534551037192" expanded="true" signature="1865:2751" ph="..." />
           </folding>
         </state>
       </provider>
