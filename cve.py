@@ -89,35 +89,57 @@ def validate(string, option=1):
         regex = r"^([KQRBNP])([a-h])([1-8])$"
     return re.match(regex, string)
 
-def knight_movement(x_axis, y_axis,yourteam):
+def pawn_movement(x_axis, y_axis, yourteam, enemyteam):
+    '''Function to check for Pawn movement'''
+    if in_range(y_axis):
+        if in_range(x_axis) is True\
+            and in_piece_list(yourteam, CHESSBOARD[y_axis][x_axis]) is False \
+            and in_piece_list(enemyteam, CHESSBOARD[y_axis][x_axis]) is False:
+            return  CHESSBOARD[y_axis][x_axis]
+    return ''
+
+def pawn_capture(x_axis, y_axis, enemyteam):
+    '''Function to check if a pawn can capture'''
+    if in_range(y_axis):
+        if in_range(x_axis) is True\
+            and in_piece_list(enemyteam, CHESSBOARD[y_axis][x_axis]):
+            return CHESSBOARD[y_axis][x_axis]
+    return ''
+
+def pawn_special(x_axis, y_axis, yourteam, enemyteam):
+    '''Function to check if the pawn has a special move'''
+    if 8 - y_axis == 1 or 8 - y_axis == 6:
+        if in_piece_list(yourteam, CHESSBOARD[8-(yourteam * 4)][x_axis]) is False\
+                and in_piece_list(enemyteam, CHESSBOARD[8-(yourteam * 4)][x_axis]) is False:
+            return CHESSBOARD[8-(yourteam * 4)][x_axis]
+    return ''
+
+def knight_movement(x_axis, y_axis, yourteam):
     '''Function to determin the moves is valid for the knight'''
     if in_range(8-y_axis):
         if in_range(x_axis):
             if in_piece_list(yourteam, CHESSBOARD[y_axis][x_axis]) is False:
                 return CHESSBOARD[y_axis][x_axis]
+    return ''
 
 def rook_movement(x_axis, y_axis, plane, increment, yourteam, enemyteam):
     '''Determines how many moves the rook can make given one direction '''
     if plane == 'x':
-        if in_range(x_axis + increment):
-            if in_piece_list(yourteam, CHESSBOARD[y_axis][x_axis + increment]):
-                return ''
+        if in_range(x_axis + increment) \
+                and in_piece_list(yourteam, CHESSBOARD[y_axis][x_axis + increment]) is False:
             if in_piece_list(enemyteam, CHESSBOARD[y_axis][x_axis + increment]):
                 return CHESSBOARD[y_axis][x_axis + increment]
             return CHESSBOARD[y_axis][x_axis + increment] + " " + \
                    rook_movement(x_axis + increment, y_axis, plane, increment,
                                  yourteam, enemyteam)
-        return ''
     if plane == 'y':
-        if in_range(y_axis + increment):
-            if in_piece_list(yourteam, CHESSBOARD[y_axis + increment][x_axis]):
-                return ''
+        if in_range(y_axis + increment) \
+                and in_piece_list(yourteam, CHESSBOARD[y_axis + increment][x_axis]) is False:
             if in_piece_list(enemyteam, CHESSBOARD[y_axis + increment][x_axis]):
                 return CHESSBOARD[y_axis + increment][x_axis]
             return CHESSBOARD[y_axis + increment][x_axis] + " " + \
                    rook_movement(x_axis, y_axis + increment, plane, increment,
                                  yourteam, enemyteam)
-        return ''
     return ''
 
 
@@ -141,25 +163,32 @@ def king_movement(x_axis, y_axis, yourteam, enemyteam, point=0):
     if point < len(increment):
         if in_range(x_axis + increment[point][0]) and in_range(y_axis + increment[point][1]):
             if in_piece_list(yourteam,
-                             CHESSBOARD[y_axis + increment[point][1]][x_axis + increment[point][0]]):
+                             CHESSBOARD[y_axis + increment[point][1]]
+                             [x_axis + increment[point][0]]):
                 return king_movement(x_axis, y_axis, yourteam, enemyteam, point + 1)
             return CHESSBOARD[y_axis + increment[point][1]][x_axis + increment[point][0]] + ' ' + \
                    king_movement(x_axis, y_axis, yourteam, enemyteam, point + 1)
         return king_movement(x_axis, y_axis, yourteam, enemyteam, point + 1)
     return ''
 
+def print_chessboard(do_print):
+    '''print chessboard if so bee'''
+    if do_print:
+        for i in range(0, len(CHESSBOARD)):
+            for j in range(0, len(CHESSBOARD[i])):
+                print(f"{CHESSBOARD[i][j]}", end=' ', flush=True)
+            print()
+def fix_chessboard(pieces):
+    '''Function to put pieces on the chessboard'''
+    for s_piece in pieces:
+        plsplit = list(s_piece)
+        CHESSBOARD[8 - int(plsplit[2])][give_column_number(plsplit[1])] = s_piece
+
 def main():
     '''the main function of the script'''
-    for w_piece in WHITE_PIECES:
-        plsplit = list(w_piece)
-        CHESSBOARD[8 - int(plsplit[2])][give_column_number(plsplit[1])] = w_piece
-    for b_piece in BLACK_PIECES:
-        plsplit = list(b_piece)
-        CHESSBOARD[8 - int(plsplit[2])][give_column_number(plsplit[1])] = b_piece
-    for i in range(0, len(CHESSBOARD)):
-        for j in range(0, len(CHESSBOARD[i])):
-            print(f"{CHESSBOARD[i][j]}", end=' ', flush=True)
-        print()
+    fix_chessboard(WHITE_PIECES)
+    fix_chessboard(BLACK_PIECES)
+    print_chessboard(ARGS.chessboard)
     # decide if the piece moving is black or white
     if ARGS.piece in WHITE_PIECES:
         piece_movement_team = 1
@@ -174,28 +203,15 @@ def main():
     print("Moves: ", end="", flush=True)
     # pawn
     if PIECE_TO_MOVE[0] is PIECES.P.name:
-        if piece_movement_team is 1:
-            if 8 - piece_y_axis is 6:
-                print(CHESSBOARD[8 - (piece_y_axis + piece_movement_team + piece_movement_team)]
-                      [piece_x_axis], end=" ", flush=True)
-            if CHESSBOARD[7 - piece_y_axis][piece_x_axis + 1] in BLACK_PIECES:
-                print(CHESSBOARD[7 - piece_y_axis][piece_x_axis + 1], end=" ", flush=True)
-            if CHESSBOARD[7 - piece_y_axis][piece_x_axis - 1] in BLACK_PIECES:
-                print(CHESSBOARD[7 - piece_y_axis][piece_x_axis - 1], end=" ", flush=True)
-        else:
-            if 8 - piece_y_axis is 1:
-                print(CHESSBOARD[8 - (piece_y_axis + piece_movement_team + piece_movement_team)]
-                      [piece_x_axis], end=" ", flush=True)
-            if CHESSBOARD[9 - piece_y_axis][piece_x_axis + 1] in WHITE_PIECES:
-                print(CHESSBOARD[9 - piece_y_axis][piece_x_axis + 1], end=" ", flush=True)
-            if CHESSBOARD[9 - piece_y_axis][piece_x_axis - 1] in WHITE_PIECES:
-                print(CHESSBOARD[9 - piece_y_axis][piece_x_axis - 1], end=" ", flush=True)
-        if in_range(8 - (piece_y_axis + piece_movement_team)):
-            if CHESSBOARD[8 - (piece_y_axis + piece_movement_team)][piece_x_axis] not in WHITE_PIECES \
-                    and CHESSBOARD[8 - (piece_y_axis + piece_movement_team)][piece_x_axis] \
-                    not in BLACK_PIECES:
-                print(CHESSBOARD[8 - (piece_y_axis + piece_movement_team)][piece_x_axis],
-                      end=" ", flush=True)
+        print(pawn_movement(piece_x_axis, 8 - (piece_y_axis + piece_movement_team),
+                            piece_movement_team, enemy_team), end=' ', flush=True)
+        print(pawn_capture(piece_x_axis + 1, 8- (piece_y_axis + piece_movement_team),
+                           enemy_team), end=' ', flush=True)
+        print(pawn_capture(piece_x_axis - 1, 8 - (piece_y_axis + piece_movement_team),
+                           enemy_team), end=' ', flush=True)
+        print(pawn_special(piece_x_axis, piece_y_axis, piece_movement_team, enemy_team),
+              end=' ', flush=True)
+
     # knight
     elif PIECE_TO_MOVE[0] is PIECES.N.name:
         print(knight_movement(piece_x_axis + 1, piece_y_axis + (piece_movement_team * 2),
@@ -254,14 +270,13 @@ def main():
     elif PIECE_TO_MOVE[0] is PIECES.K.name:
         print(king_movement(piece_x_axis, piece_y_axis, piece_movement_team, enemy_team))
 
-
 if __name__ == "__main__":
     PARSER = argparse.ArgumentParser()
     PARSER.add_argument('white', help="white pieces [KQRBNP][a-h][1-8],...", type=str)
     PARSER.add_argument('black', help='Black pieces [KQRBNP][a-h][1-8],...', type=str)
     PARSER.add_argument('piece', help='the moving piece [KQRBNP][a-h][1-8]', type=str)
+    PARSER.add_argument('--chessboard', help='prints chessboard', type=bool)
     ARGS = PARSER.parse_args()
-    #PIECE = ARGS.piece
     if validate(ARGS.white) is not None \
             and validate(ARGS.black) is not None\
             and validate(ARGS.piece) is not None:

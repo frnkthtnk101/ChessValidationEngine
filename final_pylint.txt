@@ -1,0 +1,9 @@
+************* Module cve
+cve.py:125:0: R0913: Too many arguments (6/5) (too-many-arguments)
+cve.py:146:0: R0913: Too many arguments (6/5) (too-many-arguments)
+cve.py:177:8: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)
+
+------------------------------------------------------------------
+Your code has been rated at 9.83/10 (previous run: 9.77/10, +0.06)
+
+
