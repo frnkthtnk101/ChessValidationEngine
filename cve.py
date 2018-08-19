@@ -51,10 +51,10 @@ def in_range(cord):
 def in_piece_list(side, unit):
     '''Returns true id the piece in question is in the piece list'''
     if side is 1:
-        if unit in WhitePieces:
+        if unit in WHITE_PIECES:
             return True
         return False
-    if unit in BlackPieces:
+    if unit in BLACK_PIECES:
         return True
     return False
 
@@ -89,6 +89,12 @@ def validate(string, option=1):
         regex = r"^([KQRBNP])([a-h])([1-8])$"
     return re.match(regex, string)
 
+def knight_movement(x_axis, y_axis,yourteam):
+    '''Function to determin the moves is valid for the knight'''
+    if in_range(8-y_axis):
+        if in_range(x_axis):
+            if in_piece_list(yourteam, CHESSBOARD[y_axis][x_axis]) is False:
+                return CHESSBOARD[y_axis][x_axis]
 
 def rook_movement(x_axis, y_axis, plane, increment, yourteam, enemyteam):
     '''Determines how many moves the rook can make given one direction '''
@@ -142,13 +148,12 @@ def king_movement(x_axis, y_axis, yourteam, enemyteam, point=0):
         return king_movement(x_axis, y_axis, yourteam, enemyteam, point + 1)
     return ''
 
-
 def main():
     '''the main function of the script'''
-    for w_piece in WhitePieces:
+    for w_piece in WHITE_PIECES:
         plsplit = list(w_piece)
         CHESSBOARD[8 - int(plsplit[2])][give_column_number(plsplit[1])] = w_piece
-    for b_piece in BlackPieces:
+    for b_piece in BLACK_PIECES:
         plsplit = list(b_piece)
         CHESSBOARD[8 - int(plsplit[2])][give_column_number(plsplit[1])] = b_piece
     for i in range(0, len(CHESSBOARD)):
@@ -156,98 +161,61 @@ def main():
             print(f"{CHESSBOARD[i][j]}", end=' ', flush=True)
         print()
     # decide if the piece moving is black or white
-    if args.piece in WhitePieces:
+    if ARGS.piece in WHITE_PIECES:
         piece_movement_team = 1
-    elif args.piece in BlackPieces:
+    elif ARGS.piece in BLACK_PIECES:
         piece_movement_team = -1
     else:
         raise ValueError("Piece you are trying to move is not white set or black set.")
     enemy_team = piece_movement_team * -1
     # decide its move
-    piece_x_axis = give_column_number(PieceToMove[1])
-    piece_y_axis = int(PieceToMove[2])
+    piece_x_axis = give_column_number(PIECE_TO_MOVE[1])
+    piece_y_axis = int(PIECE_TO_MOVE[2])
     print("Moves: ", end="", flush=True)
     # pawn
-    if PieceToMove[0] is PIECES.P.name:
+    if PIECE_TO_MOVE[0] is PIECES.P.name:
         if piece_movement_team is 1:
             if 8 - piece_y_axis is 6:
                 print(CHESSBOARD[8 - (piece_y_axis + piece_movement_team + piece_movement_team)]
                       [piece_x_axis], end=" ", flush=True)
-            if CHESSBOARD[7 - piece_y_axis][piece_x_axis + 1] in BlackPieces:
+            if CHESSBOARD[7 - piece_y_axis][piece_x_axis + 1] in BLACK_PIECES:
                 print(CHESSBOARD[7 - piece_y_axis][piece_x_axis + 1], end=" ", flush=True)
-            if CHESSBOARD[7 - piece_y_axis][piece_x_axis - 1] in BlackPieces:
+            if CHESSBOARD[7 - piece_y_axis][piece_x_axis - 1] in BLACK_PIECES:
                 print(CHESSBOARD[7 - piece_y_axis][piece_x_axis - 1], end=" ", flush=True)
         else:
             if 8 - piece_y_axis is 1:
                 print(CHESSBOARD[8 - (piece_y_axis + piece_movement_team + piece_movement_team)]
                       [piece_x_axis], end=" ", flush=True)
-            if CHESSBOARD[9 - piece_y_axis][piece_x_axis + 1] in WhitePieces:
+            if CHESSBOARD[9 - piece_y_axis][piece_x_axis + 1] in WHITE_PIECES:
                 print(CHESSBOARD[9 - piece_y_axis][piece_x_axis + 1], end=" ", flush=True)
-            if CHESSBOARD[9 - piece_y_axis][piece_x_axis - 1] in WhitePieces:
+            if CHESSBOARD[9 - piece_y_axis][piece_x_axis - 1] in WHITE_PIECES:
                 print(CHESSBOARD[9 - piece_y_axis][piece_x_axis - 1], end=" ", flush=True)
         if in_range(8 - (piece_y_axis + piece_movement_team)):
-            if CHESSBOARD[8 - (piece_y_axis + piece_movement_team)][piece_x_axis] not in WhitePieces \
+            if CHESSBOARD[8 - (piece_y_axis + piece_movement_team)][piece_x_axis] not in WHITE_PIECES \
                     and CHESSBOARD[8 - (piece_y_axis + piece_movement_team)][piece_x_axis] \
-                    not in BlackPieces:
+                    not in BLACK_PIECES:
                 print(CHESSBOARD[8 - (piece_y_axis + piece_movement_team)][piece_x_axis],
                       end=" ", flush=True)
     # knight
-    elif PieceToMove[0] is PIECES.N.name:
-        if in_range(8 - (piece_y_axis + (piece_movement_team * 2))):
-            if in_range(piece_x_axis + 1):
-                if in_piece_list(enemy_team,
-                                 CHESSBOARD[8 - (piece_y_axis + (piece_movement_team * 2))]
-                                 [piece_x_axis + 1]) is False:
-                    print(CHESSBOARD[8 - (piece_y_axis + (piece_movement_team * 2))]
-                          [piece_x_axis + 1], end=" ", flush=True)
-            if in_range(piece_x_axis - 1):
-                if in_piece_list(enemy_team,
-                                 CHESSBOARD[8 - (piece_y_axis + (piece_movement_team * 2))] is False):
-                    print(CHESSBOARD[8 - (piece_y_axis + (piece_movement_team * 2))][piece_x_axis - 1],
-                          end=" ", flush=True)
-        if in_range(8 - (piece_y_axis + (piece_movement_team * -2))):
-            if in_range(piece_x_axis + 1):
-                if in_piece_list(enemy_team,
-                                 CHESSBOARD[8 - (piece_y_axis + (piece_movement_team * -2))]
-                                 [piece_x_axis + 1]) is False:
-                    print(CHESSBOARD[8 - (piece_y_axis + (piece_movement_team * -2))][piece_x_axis + 1],
-                          end=" ", flush=True)
-            if in_range(piece_x_axis - 1):
-                if in_piece_list(enemy_team,
-                                 CHESSBOARD[8 - (piece_y_axis + (piece_movement_team * -2))]
-                                 [piece_x_axis - 1]) is False:
-                    print(CHESSBOARD[8 - (piece_y_axis + (piece_movement_team * -2))]
-                          [piece_x_axis - 1],
-                          end=" ", flush=True)
-        if in_range(8 - (piece_y_axis + (piece_movement_team * 1))):
-            if in_range(piece_x_axis - 2):
-                if in_piece_list(enemy_team,
-                                 CHESSBOARD[8 - (piece_y_axis + (piece_movement_team * 1))]
-                                 [piece_x_axis - 2]) is False:
-                    print(CHESSBOARD[8 - (piece_y_axis + (piece_movement_team * 1))]
-                          [piece_x_axis - 2],
-                          end=" ", flush=True)
-            if in_range(piece_x_axis + 2):
-                if in_piece_list(enemy_team,
-                                 CHESSBOARD[8 - (piece_y_axis + (piece_movement_team * 1))]
-                                 [piece_x_axis + 2]) is False:
-                    print(CHESSBOARD[8 - (piece_y_axis + (piece_movement_team * 1))][piece_x_axis + 2],
-                          end=" ", flush=True)
-        if in_range(8 - (piece_y_axis + (piece_movement_team * -1))):
-            if in_range(piece_x_axis + 2):
-                if in_piece_list(enemy_team,
-                                 CHESSBOARD[8 - (piece_y_axis + (piece_movement_team * -1))]
-                                 [piece_x_axis + 2]) is False:
-                    print(CHESSBOARD[8 - (piece_y_axis + (piece_movement_team * -1))][piece_x_axis + 2],
-                          end=" ", flush=True)
-            if in_range(piece_x_axis - 2):
-                if in_piece_list(enemy_team,
-                                 CHESSBOARD[8 - (piece_y_axis + (piece_movement_team * -1))]
-                                 [piece_x_axis - 2]) is False:
-                    print(CHESSBOARD[8 - (piece_y_axis + (piece_movement_team * -1))][piece_x_axis - 2],
-                          end=" ", flush=True)
+    elif PIECE_TO_MOVE[0] is PIECES.N.name:
+        print(knight_movement(piece_x_axis + 1, piece_y_axis + (piece_movement_team * 2),
+                              piece_movement_team), end=' ', flush=True)
+        print(knight_movement(piece_x_axis - 1, piece_y_axis + (piece_movement_team * 2),
+                              piece_movement_team), end=' ', flush=True)
+        print(knight_movement(piece_x_axis + 1, piece_y_axis + (piece_movement_team * -2),
+                              piece_movement_team), end=' ', flush=True)
+        print(knight_movement(piece_x_axis - 1, piece_y_axis + (piece_movement_team * -2),
+                              piece_movement_team), end=' ', flush=True)
+        print(knight_movement(piece_x_axis + 2, piece_y_axis + (piece_movement_team * 1),
+                              piece_movement_team), end=' ', flush=True)
+        print(knight_movement(piece_x_axis - 2, piece_y_axis + (piece_movement_team * 1),
+                              piece_movement_team), end=' ', flush=True)
+        print(knight_movement(piece_x_axis + 2, piece_y_axis + (piece_movement_team * -1),
+                              piece_movement_team), end=' ', flush=True)
+        print(knight_movement(piece_x_axis - 2, piece_y_axis + (piece_movement_team * -1),
+                              piece_movement_team), end=' ', flush=True)
     # Rook
-    elif PieceToMove[0] is PIECES.R.name:
+    elif PIECE_TO_MOVE[0] is PIECES.R.name:
         print(rook_movement(piece_x_axis, piece_y_axis, 'x', 1, piece_movement_team, enemy_team),
               end=' ', flush=True)
         print(rook_movement(piece_x_axis, piece_y_axis, 'x', -1, piece_movement_team, enemy_team),
@@ -257,7 +225,7 @@ def main():
         print(rook_movement(piece_x_axis, piece_y_axis, 'y', -1, piece_movement_team, enemy_team),
               end=' ', flush=True)
     # Bishop
-    elif PieceToMove[0] is PIECES.B.name:
+    elif PIECE_TO_MOVE[0] is PIECES.B.name:
         print(bishop_movement(piece_x_axis, piece_y_axis, 1, 1, piece_movement_team, enemy_team),
               end=' ', flush=True)
         print(bishop_movement(piece_x_axis, piece_y_axis, 1, -1, piece_movement_team, enemy_team),
@@ -266,7 +234,7 @@ def main():
               end=' ', flush=True)
         print(bishop_movement(piece_x_axis, piece_y_axis, -1, -1, piece_movement_team, enemy_team),
               end=' ', flush=True)
-    elif PieceToMove[0] is PIECES.Q.name:
+    elif PIECE_TO_MOVE[0] is PIECES.Q.name:
         print(rook_movement(piece_x_axis, piece_y_axis, 'x', 1, piece_movement_team, enemy_team),
               end=' ', flush=True)
         print(rook_movement(piece_x_axis, piece_y_axis, 'x', -1, piece_movement_team, enemy_team),
@@ -283,28 +251,23 @@ def main():
               end=' ', flush=True)
         print(bishop_movement(piece_x_axis, piece_y_axis, -1, -1, piece_movement_team, enemy_team),
               end=' ', flush=True)
-    elif PieceToMove[0] is PIECES.K.name:
+    elif PIECE_TO_MOVE[0] is PIECES.K.name:
         print(king_movement(piece_x_axis, piece_y_axis, piece_movement_team, enemy_team))
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument('white', help="white pieces [KQRBNP][a-h][1-8],...", type=str)
-    parser.add_argument('black', help='Black pieces [KQRBNP][a-h][1-8],...', type=str)
-    parser.add_argument('piece', help='the moving piece [KQRBNP][a-h][1-8]', type=str)
-
-    args = parser.parse_args()
-
-    piece = args.piece
-
-    WhiteSet = validate(args.white)
-    BlackSet = validate(args.black)
-    MovingPiece = validate(args.piece, 1)
-
-    if WhiteSet is not None and BlackSet is not None and MovingPiece is not None:
-        WhitePieces = args.white.split(',')
-        BlackPieces = args.black.split(',')
-        PieceToMove = list(args.piece)
+    PARSER = argparse.ArgumentParser()
+    PARSER.add_argument('white', help="white pieces [KQRBNP][a-h][1-8],...", type=str)
+    PARSER.add_argument('black', help='Black pieces [KQRBNP][a-h][1-8],...', type=str)
+    PARSER.add_argument('piece', help='the moving piece [KQRBNP][a-h][1-8]', type=str)
+    ARGS = PARSER.parse_args()
+    #PIECE = ARGS.piece
+    if validate(ARGS.white) is not None \
+            and validate(ARGS.black) is not None\
+            and validate(ARGS.piece) is not None:
+        WHITE_PIECES = ARGS.white.split(',')
+        BLACK_PIECES = ARGS.black.split(',')
+        PIECE_TO_MOVE = list(ARGS.piece)
         main()
     else:
         raise ValueError("One of the paramaters was out of format")

@@ -771,7 +771,7 @@ cve.py:231:35: C0326: Exactly one space required after comma
     MovingPiece=validate(args.piece,1)
                                    ^ (bad-whitespace)
 cve.py:234:20: C0326: Exactly one space required after assignment
-        WhitePieces =args.white.split(',')
+        WHITE_PIECES =args.white.split(',')
                     ^ (bad-whitespace)
 cve.py:239:0: C0304: Final newline missing (missing-final-newline)
 cve.py:1:0: C0111: Missing module docstring (missing-docstring)
@@ -835,9 +835,9 @@ cve.py:227:4: C0103: Constant name "piece" doesn't conform to UPPER_CASE naming 
 cve.py:229:4: C0103: Constant name "WhiteSet" doesn't conform to UPPER_CASE naming style (invalid-name)
 cve.py:230:4: C0103: Constant name "BlackSet" doesn't conform to UPPER_CASE naming style (invalid-name)
 cve.py:231:4: C0103: Constant name "MovingPiece" doesn't conform to UPPER_CASE naming style (invalid-name)
-cve.py:234:8: C0103: Constant name "WhitePieces" doesn't conform to UPPER_CASE naming style (invalid-name)
-cve.py:235:8: C0103: Constant name "BlackPieces" doesn't conform to UPPER_CASE naming style (invalid-name)
-cve.py:236:8: C0103: Constant name "PieceToMove" doesn't conform to UPPER_CASE naming style (invalid-name)
+cve.py:234:8: C0103: Constant name "WHITE_PIECES" doesn't conform to UPPER_CASE naming style (invalid-name)
+cve.py:235:8: C0103: Constant name "BLACK_PIECES" doesn't conform to UPPER_CASE naming style (invalid-name)
+cve.py:236:8: C0103: Constant name "PIECE_TO_MOVE" doesn't conform to UPPER_CASE naming style (invalid-name)
 
 ----------------------------------------------------------------------
 Your code has been rated at -10.21/10 (previous run: -10.62/10, +0.41)

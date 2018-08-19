@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="628fd383-50b5-432e-8652-34bd9245b185" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/ChessValidationEngine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ChessValidationEngine.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cve.py" beforeDir="false" afterPath="$PROJECT_DIR$/cve.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/pyvenv.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pyvenv.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pylintissues.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pylintissues.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,7 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ChessValidationEngine$cve.coverage" NAME="cve Coverage Results" MODIFIED="1534696220287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ChessValidationEngine$cve.coverage" NAME="cve Coverage Results" MODIFIED="1534699321256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1291491187">
@@ -30,13 +27,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cfg" value="2" />
-          <entry key="py" value="4997" />
+          <entry key="py" value="5473" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Ini" value="2" />
-          <entry key="Python" value="4997" />
+          <entry key="Python" value="5473" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -61,11 +58,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cve.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="204" column="33" selection-start-line="204" selection-start-column="33" selection-end-line="204" selection-end-column="33" />
+            <state relative-caret-position="209">
+              <caret line="201" column="30" selection-start-line="201" selection-start-column="30" selection-end-line="201" selection-end-column="30" />
               <folding>
                 <element signature="e#65#86#0" expanded="true" />
-                <marker date="1534696555842" expanded="true" signature="1370:1533" ph="..." />
+                <marker date="1534699463602" expanded="true" signature="1370:1535" ph="..." />
+                <marker date="1534699463602" expanded="true" signature="2563:2748" ph="..." />
               </folding>
             </state>
           </provider>
@@ -105,6 +103,10 @@
       <find>movement</find>
       <find>x</find>
       <find>y</find>
+      <find>whitePieces</find>
+      <find>BLACKPIECES</find>
+      <find>PIECETOMOVE</find>
+      <find>piece</find>
     </findStrings>
     <replaceStrings>
       <replace>COLUMNS</replace>
@@ -122,6 +124,9 @@
       <replace>piece_movement_team</replace>
       <replace />
       <replace>piece_y_axis</replace>
+      <replace>WHITE_PIECES</replace>
+      <replace>BLACK_PIECES</replace>
+      <replace>PIECE_TO_MOVE</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -141,9 +146,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="-1280" />
+    <option name="y" value="-224" />
     <option name="width" value="1280" />
-    <option name="height" value="800" />
+    <option name="height" value="1024" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -222,7 +229,7 @@
       <option name="ADD_SOURCE_ROOTS" value="false" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cve.py" />
-      <option name="PARAMETERS" value="Ph1,Pf5 Be4,Pd5 Be4" />
+      <option name="PARAMETERS" value="Ph1 Ne4 Ne4" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -259,15 +266,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1280" y="-224" width="1280" height="1024" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2536349" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49919224" visible="true" weight="0.41232878" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49919224" visible="true" weight="0.4119497" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39832285" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -328,11 +334,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cve.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="204" column="33" selection-start-line="204" selection-start-column="33" selection-end-line="204" selection-end-column="33" />
+        <state relative-caret-position="209">
+          <caret line="201" column="30" selection-start-line="201" selection-start-column="30" selection-end-line="201" selection-end-column="30" />
           <folding>
             <element signature="e#65#86#0" expanded="true" />
-            <marker date="1534696555842" expanded="true" signature="1370:1533" ph="..." />
+            <marker date="1534699463602" expanded="true" signature="1370:1535" ph="..." />
+            <marker date="1534699463602" expanded="true" signature="2563:2748" ph="..." />
           </folding>
         </state>
       </provider>
