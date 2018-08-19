@@ -1,0 +1,846 @@
+/Library/Frameworks/Python.framework/Versions/3.7/bin/pylint /Users/francopettigrosso/ws/ChessValidationEngine/cve.py
+************* Module cve
+cve.py:16:5: C0326: Exactly one space required around assignment
+    K=1
+     ^ (bad-whitespace)
+cve.py:17:5: C0326: Exactly one space required around assignment
+    Q=2
+     ^ (bad-whitespace)
+cve.py:18:5: C0326: Exactly one space required around assignment
+    R=3
+     ^ (bad-whitespace)
+cve.py:19:5: C0326: Exactly one space required around assignment
+    B=4
+     ^ (bad-whitespace)
+cve.py:20:5: C0326: Exactly one space required around assignment
+    N=5
+     ^ (bad-whitespace)
+cve.py:21:5: C0326: Exactly one space required around assignment
+    P=6
+     ^ (bad-whitespace)
+cve.py:24:19: C0326: Exactly one space required after comma
+CHESSBOARD = [['a8','b8','c8','d8','e8','f8','g8','h8'],#0
+                   ^ (bad-whitespace)
+cve.py:24:24: C0326: Exactly one space required after comma
+CHESSBOARD = [['a8','b8','c8','d8','e8','f8','g8','h8'],#0
+                        ^ (bad-whitespace)
+cve.py:24:29: C0326: Exactly one space required after comma
+CHESSBOARD = [['a8','b8','c8','d8','e8','f8','g8','h8'],#0
+                             ^ (bad-whitespace)
+cve.py:24:34: C0326: Exactly one space required after comma
+CHESSBOARD = [['a8','b8','c8','d8','e8','f8','g8','h8'],#0
+                                  ^ (bad-whitespace)
+cve.py:24:39: C0326: Exactly one space required after comma
+CHESSBOARD = [['a8','b8','c8','d8','e8','f8','g8','h8'],#0
+                                       ^ (bad-whitespace)
+cve.py:24:44: C0326: Exactly one space required after comma
+CHESSBOARD = [['a8','b8','c8','d8','e8','f8','g8','h8'],#0
+                                            ^ (bad-whitespace)
+cve.py:24:49: C0326: Exactly one space required after comma
+CHESSBOARD = [['a8','b8','c8','d8','e8','f8','g8','h8'],#0
+                                                 ^ (bad-whitespace)
+cve.py:25:19: C0326: Exactly one space required after comma
+              ['a7','b7','c7','d7','e7','f7','g7','h7'],#1
+                   ^ (bad-whitespace)
+cve.py:25:24: C0326: Exactly one space required after comma
+              ['a7','b7','c7','d7','e7','f7','g7','h7'],#1
+                        ^ (bad-whitespace)
+cve.py:25:29: C0326: Exactly one space required after comma
+              ['a7','b7','c7','d7','e7','f7','g7','h7'],#1
+                             ^ (bad-whitespace)
+cve.py:25:34: C0326: Exactly one space required after comma
+              ['a7','b7','c7','d7','e7','f7','g7','h7'],#1
+                                  ^ (bad-whitespace)
+cve.py:25:39: C0326: Exactly one space required after comma
+              ['a7','b7','c7','d7','e7','f7','g7','h7'],#1
+                                       ^ (bad-whitespace)
+cve.py:25:44: C0326: Exactly one space required after comma
+              ['a7','b7','c7','d7','e7','f7','g7','h7'],#1
+                                            ^ (bad-whitespace)
+cve.py:25:49: C0326: Exactly one space required after comma
+              ['a7','b7','c7','d7','e7','f7','g7','h7'],#1
+                                                 ^ (bad-whitespace)
+cve.py:26:19: C0326: Exactly one space required after comma
+              ['a6','b6','c6','d6','e6','f6','g6','h6'],#2
+                   ^ (bad-whitespace)
+cve.py:26:24: C0326: Exactly one space required after comma
+              ['a6','b6','c6','d6','e6','f6','g6','h6'],#2
+                        ^ (bad-whitespace)
+cve.py:26:29: C0326: Exactly one space required after comma
+              ['a6','b6','c6','d6','e6','f6','g6','h6'],#2
+                             ^ (bad-whitespace)
+cve.py:26:34: C0326: Exactly one space required after comma
+              ['a6','b6','c6','d6','e6','f6','g6','h6'],#2
+                                  ^ (bad-whitespace)
+cve.py:26:39: C0326: Exactly one space required after comma
+              ['a6','b6','c6','d6','e6','f6','g6','h6'],#2
+                                       ^ (bad-whitespace)
+cve.py:26:44: C0326: Exactly one space required after comma
+              ['a6','b6','c6','d6','e6','f6','g6','h6'],#2
+                                            ^ (bad-whitespace)
+cve.py:26:49: C0326: Exactly one space required after comma
+              ['a6','b6','c6','d6','e6','f6','g6','h6'],#2
+                                                 ^ (bad-whitespace)
+cve.py:27:19: C0326: Exactly one space required after comma
+              ['a5','b5','c5','d5','e5','f5','g5','h5'],#3`
+                   ^ (bad-whitespace)
+cve.py:27:24: C0326: Exactly one space required after comma
+              ['a5','b5','c5','d5','e5','f5','g5','h5'],#3`
+                        ^ (bad-whitespace)
+cve.py:27:29: C0326: Exactly one space required after comma
+              ['a5','b5','c5','d5','e5','f5','g5','h5'],#3`
+                             ^ (bad-whitespace)
+cve.py:27:34: C0326: Exactly one space required after comma
+              ['a5','b5','c5','d5','e5','f5','g5','h5'],#3`
+                                  ^ (bad-whitespace)
+cve.py:27:39: C0326: Exactly one space required after comma
+              ['a5','b5','c5','d5','e5','f5','g5','h5'],#3`
+                                       ^ (bad-whitespace)
+cve.py:27:44: C0326: Exactly one space required after comma
+              ['a5','b5','c5','d5','e5','f5','g5','h5'],#3`
+                                            ^ (bad-whitespace)
+cve.py:27:49: C0326: Exactly one space required after comma
+              ['a5','b5','c5','d5','e5','f5','g5','h5'],#3`
+                                                 ^ (bad-whitespace)
+cve.py:28:19: C0326: Exactly one space required after comma
+              ['a4','b4','c4','d4','e4','f4','g4','h4'],#4
+                   ^ (bad-whitespace)
+cve.py:28:24: C0326: Exactly one space required after comma
+              ['a4','b4','c4','d4','e4','f4','g4','h4'],#4
+                        ^ (bad-whitespace)
+cve.py:28:29: C0326: Exactly one space required after comma
+              ['a4','b4','c4','d4','e4','f4','g4','h4'],#4
+                             ^ (bad-whitespace)
+cve.py:28:34: C0326: Exactly one space required after comma
+              ['a4','b4','c4','d4','e4','f4','g4','h4'],#4
+                                  ^ (bad-whitespace)
+cve.py:28:39: C0326: Exactly one space required after comma
+              ['a4','b4','c4','d4','e4','f4','g4','h4'],#4
+                                       ^ (bad-whitespace)
+cve.py:28:44: C0326: Exactly one space required after comma
+              ['a4','b4','c4','d4','e4','f4','g4','h4'],#4
+                                            ^ (bad-whitespace)
+cve.py:28:49: C0326: Exactly one space required after comma
+              ['a4','b4','c4','d4','e4','f4','g4','h4'],#4
+                                                 ^ (bad-whitespace)
+cve.py:29:19: C0326: Exactly one space required after comma
+              ['a3','b3','c3','d3','e3','f3','g3','h3'],#5
+                   ^ (bad-whitespace)
+cve.py:29:24: C0326: Exactly one space required after comma
+              ['a3','b3','c3','d3','e3','f3','g3','h3'],#5
+                        ^ (bad-whitespace)
+cve.py:29:29: C0326: Exactly one space required after comma
+              ['a3','b3','c3','d3','e3','f3','g3','h3'],#5
+                             ^ (bad-whitespace)
+cve.py:29:34: C0326: Exactly one space required after comma
+              ['a3','b3','c3','d3','e3','f3','g3','h3'],#5
+                                  ^ (bad-whitespace)
+cve.py:29:39: C0326: Exactly one space required after comma
+              ['a3','b3','c3','d3','e3','f3','g3','h3'],#5
+                                       ^ (bad-whitespace)
+cve.py:29:44: C0326: Exactly one space required after comma
+              ['a3','b3','c3','d3','e3','f3','g3','h3'],#5
+                                            ^ (bad-whitespace)
+cve.py:29:49: C0326: Exactly one space required after comma
+              ['a3','b3','c3','d3','e3','f3','g3','h3'],#5
+                                                 ^ (bad-whitespace)
+cve.py:30:19: C0326: Exactly one space required after comma
+              ['a2','b2','c2','d2','e2','f2','g2','h2'],#6
+                   ^ (bad-whitespace)
+cve.py:30:24: C0326: Exactly one space required after comma
+              ['a2','b2','c2','d2','e2','f2','g2','h2'],#6
+                        ^ (bad-whitespace)
+cve.py:30:29: C0326: Exactly one space required after comma
+              ['a2','b2','c2','d2','e2','f2','g2','h2'],#6
+                             ^ (bad-whitespace)
+cve.py:30:34: C0326: Exactly one space required after comma
+              ['a2','b2','c2','d2','e2','f2','g2','h2'],#6
+                                  ^ (bad-whitespace)
+cve.py:30:39: C0326: Exactly one space required after comma
+              ['a2','b2','c2','d2','e2','f2','g2','h2'],#6
+                                       ^ (bad-whitespace)
+cve.py:30:44: C0326: Exactly one space required after comma
+              ['a2','b2','c2','d2','e2','f2','g2','h2'],#6
+                                            ^ (bad-whitespace)
+cve.py:30:49: C0326: Exactly one space required after comma
+              ['a2','b2','c2','d2','e2','f2','g2','h2'],#6
+                                                 ^ (bad-whitespace)
+cve.py:31:19: C0326: Exactly one space required after comma
+              ['a1','b1','c1','d1','e1','f1','g1','h1']]#7
+                   ^ (bad-whitespace)
+cve.py:31:24: C0326: Exactly one space required after comma
+              ['a1','b1','c1','d1','e1','f1','g1','h1']]#7
+                        ^ (bad-whitespace)
+cve.py:31:29: C0326: Exactly one space required after comma
+              ['a1','b1','c1','d1','e1','f1','g1','h1']]#7
+                             ^ (bad-whitespace)
+cve.py:31:34: C0326: Exactly one space required after comma
+              ['a1','b1','c1','d1','e1','f1','g1','h1']]#7
+                                  ^ (bad-whitespace)
+cve.py:31:39: C0326: Exactly one space required after comma
+              ['a1','b1','c1','d1','e1','f1','g1','h1']]#7
+                                       ^ (bad-whitespace)
+cve.py:31:44: C0326: Exactly one space required after comma
+              ['a1','b1','c1','d1','e1','f1','g1','h1']]#7
+                                            ^ (bad-whitespace)
+cve.py:31:49: C0326: Exactly one space required after comma
+              ['a1','b1','c1','d1','e1','f1','g1','h1']]#7
+                                                 ^ (bad-whitespace)
+cve.py:34:31: C0326: No space allowed before :
+    if cord >= 0 and cord <= 7 :
+                               ^ (bad-whitespace)
+cve.py:48:0: C0325: Unnecessary parens after 'if' keyword (superfluous-parens)
+cve.py:50:0: C0325: Unnecessary parens after 'elif' keyword (superfluous-parens)
+cve.py:52:0: C0325: Unnecessary parens after 'elif' keyword (superfluous-parens)
+cve.py:54:0: C0325: Unnecessary parens after 'elif' keyword (superfluous-parens)
+cve.py:56:0: C0325: Unnecessary parens after 'elif' keyword (superfluous-parens)
+cve.py:58:0: C0325: Unnecessary parens after 'elif' keyword (superfluous-parens)
+cve.py:60:0: C0325: Unnecessary parens after 'elif' keyword (superfluous-parens)
+cve.py:62:0: C0325: Unnecessary parens after 'elif' keyword (superfluous-parens)
+cve.py:65:19: C0326: Exactly one space required after comma
+def validate(string,option =1):
+                   ^ (bad-whitespace)
+cve.py:65:27: C0326: No space allowed before keyword argument assignment
+def validate(string,option =1):
+                           ^ (bad-whitespace)
+cve.py:70:25: C0326: Exactly one space required after comma
+    return re.match(regex,string)
+                         ^ (bad-whitespace)
+cve.py:72:18: C0326: Exactly one space required after comma
+def rook_movement(x,y,plane,increment,yourteam,enemyteam):
+                  ^ (bad-whitespace)
+cve.py:72:20: C0326: Exactly one space required after comma
+def rook_movement(x,y,plane,increment,yourteam,enemyteam):
+                    ^ (bad-whitespace)
+cve.py:72:26: C0326: Exactly one space required after comma
+def rook_movement(x,y,plane,increment,yourteam,enemyteam):
+                          ^ (bad-whitespace)
+cve.py:72:36: C0326: Exactly one space required after comma
+def rook_movement(x,y,plane,increment,yourteam,enemyteam):
+                                    ^ (bad-whitespace)
+cve.py:72:45: C0326: Exactly one space required after comma
+def rook_movement(x,y,plane,increment,yourteam,enemyteam):
+                                             ^ (bad-whitespace)
+cve.py:75:35: C0326: Exactly one space required after comma
+            if in_piece_list(yourteam,CHESSBOARD[y][x+increment]):
+                                   ^ (bad-whitespace)
+cve.py:77:38: C0326: Exactly one space required after comma
+            elif in_piece_list(enemyteam,CHESSBOARD[y][x+increment]):
+                                      ^ (bad-whitespace)
+cve.py:80:0: C0301: Line too long (116/100) (line-too-long)
+cve.py:80:78: C0326: Exactly one space required after comma
+                return CHESSBOARD[y][x+increment]+" "+rook_movement(x+increment,y,plane,increment,yourteam,enemyteam)
+                                                                              ^ (bad-whitespace)
+cve.py:80:80: C0326: Exactly one space required after comma
+                return CHESSBOARD[y][x+increment]+" "+rook_movement(x+increment,y,plane,increment,yourteam,enemyteam)
+                                                                                ^ (bad-whitespace)
+cve.py:80:86: C0326: Exactly one space required after comma
+                return CHESSBOARD[y][x+increment]+" "+rook_movement(x+increment,y,plane,increment,yourteam,enemyteam)
+                                                                                      ^ (bad-whitespace)
+cve.py:80:96: C0326: Exactly one space required after comma
+                return CHESSBOARD[y][x+increment]+" "+rook_movement(x+increment,y,plane,increment,yourteam,enemyteam)
+                                                                                                ^ (bad-whitespace)
+cve.py:80:105: C0326: Exactly one space required after comma
+                return CHESSBOARD[y][x+increment]+" "+rook_movement(x+increment,y,plane,increment,yourteam,enemyteam)
+                                                                                                         ^ (bad-whitespace)
+cve.py:85:35: C0326: Exactly one space required after comma
+            if in_piece_list(yourteam,CHESSBOARD[y+increment][x]):
+                                   ^ (bad-whitespace)
+cve.py:87:38: C0326: Exactly one space required after comma
+            elif in_piece_list(enemyteam,CHESSBOARD[y+increment][x]):
+                                      ^ (bad-whitespace)
+cve.py:90:0: C0301: Line too long (116/100) (line-too-long)
+cve.py:90:68: C0326: Exactly one space required after comma
+                return CHESSBOARD[y+increment][x]+" "+rook_movement(x,y+increment,plane,increment,yourteam,enemyteam)
+                                                                    ^ (bad-whitespace)
+cve.py:90:80: C0326: Exactly one space required after comma
+                return CHESSBOARD[y+increment][x]+" "+rook_movement(x,y+increment,plane,increment,yourteam,enemyteam)
+                                                                                ^ (bad-whitespace)
+cve.py:90:86: C0326: Exactly one space required after comma
+                return CHESSBOARD[y+increment][x]+" "+rook_movement(x,y+increment,plane,increment,yourteam,enemyteam)
+                                                                                      ^ (bad-whitespace)
+cve.py:90:96: C0326: Exactly one space required after comma
+                return CHESSBOARD[y+increment][x]+" "+rook_movement(x,y+increment,plane,increment,yourteam,enemyteam)
+                                                                                                ^ (bad-whitespace)
+cve.py:90:105: C0326: Exactly one space required after comma
+                return CHESSBOARD[y+increment][x]+" "+rook_movement(x,y+increment,plane,increment,yourteam,enemyteam)
+                                                                                                         ^ (bad-whitespace)
+cve.py:95:20: C0326: Exactly one space required after comma
+def BishopMovement(x,y,xincrement,yincrement,yourteam,enemyteam):
+                    ^ (bad-whitespace)
+cve.py:95:22: C0326: Exactly one space required after comma
+def BishopMovement(x,y,xincrement,yincrement,yourteam,enemyteam):
+                      ^ (bad-whitespace)
+cve.py:95:33: C0326: Exactly one space required after comma
+def BishopMovement(x,y,xincrement,yincrement,yourteam,enemyteam):
+                                 ^ (bad-whitespace)
+cve.py:95:44: C0326: Exactly one space required after comma
+def BishopMovement(x,y,xincrement,yincrement,yourteam,enemyteam):
+                                            ^ (bad-whitespace)
+cve.py:95:53: C0326: Exactly one space required after comma
+def BishopMovement(x,y,xincrement,yincrement,yourteam,enemyteam):
+                                                     ^ (bad-whitespace)
+cve.py:97:31: C0326: Exactly one space required after comma
+        if in_piece_list(yourteam,CHESSBOARD[y+yincrement][x+xincrement]):
+                               ^ (bad-whitespace)
+cve.py:99:34: C0326: Exactly one space required after comma
+        elif in_piece_list(enemyteam,CHESSBOARD[y+yincrement][x+xincrement]):
+                                  ^ (bad-whitespace)
+cve.py:104:0: C0301: Line too long (144/100) (line-too-long)
+cve.py:104:89: C0326: Exactly one space required after comma
+            return CHESSBOARD[y+yincrement][x+xincrement]+' '+BishopMovement(x+xincrement,y+yincrement,xincrement,yincrement,yourteam,enemyteam)
+                                                                                         ^ (bad-whitespace)
+cve.py:104:102: C0326: Exactly one space required after comma
+            return CHESSBOARD[y+yincrement][x+xincrement]+' '+BishopMovement(x+xincrement,y+yincrement,xincrement,yincrement,yourteam,enemyteam)
+                                                                                                      ^ (bad-whitespace)
+cve.py:104:113: C0326: Exactly one space required after comma
+            return CHESSBOARD[y+yincrement][x+xincrement]+' '+BishopMovement(x+xincrement,y+yincrement,xincrement,yincrement,yourteam,enemyteam)
+                                                                                                                 ^ (bad-whitespace)
+cve.py:104:124: C0326: Exactly one space required after comma
+            return CHESSBOARD[y+yincrement][x+xincrement]+' '+BishopMovement(x+xincrement,y+yincrement,xincrement,yincrement,yourteam,enemyteam)
+                                                                                                                            ^ (bad-whitespace)
+cve.py:104:133: C0326: Exactly one space required after comma
+            return CHESSBOARD[y+yincrement][x+xincrement]+' '+BishopMovement(x+xincrement,y+yincrement,xincrement,yincrement,yourteam,enemyteam)
+                                                                                                                                     ^ (bad-whitespace)
+cve.py:108:18: C0326: Exactly one space required after comma
+def king_movement(x,y,yourteam,enemyteam,point = 0):
+                  ^ (bad-whitespace)
+cve.py:108:20: C0326: Exactly one space required after comma
+def king_movement(x,y,yourteam,enemyteam,point = 0):
+                    ^ (bad-whitespace)
+cve.py:108:29: C0326: Exactly one space required after comma
+def king_movement(x,y,yourteam,enemyteam,point = 0):
+                             ^ (bad-whitespace)
+cve.py:108:39: C0326: Exactly one space required after comma
+def king_movement(x,y,yourteam,enemyteam,point = 0):
+                                       ^ (bad-whitespace)
+cve.py:108:46: C0326: No space allowed around keyword argument assignment
+def king_movement(x,y,yourteam,enemyteam,point = 0):
+                                              ^ (bad-whitespace)
+cve.py:109:19: C0326: Exactly one space required after comma
+    increment = [[0,1],[0,-1],[1,0],[1,1],[1,-1],[-1,0],[-1,1],[-1,-1]]
+                   ^ (bad-whitespace)
+cve.py:109:22: C0326: Exactly one space required after comma
+    increment = [[0,1],[0,-1],[1,0],[1,1],[1,-1],[-1,0],[-1,1],[-1,-1]]
+                      ^ (bad-whitespace)
+cve.py:109:25: C0326: Exactly one space required after comma
+    increment = [[0,1],[0,-1],[1,0],[1,1],[1,-1],[-1,0],[-1,1],[-1,-1]]
+                         ^ (bad-whitespace)
+cve.py:109:29: C0326: Exactly one space required after comma
+    increment = [[0,1],[0,-1],[1,0],[1,1],[1,-1],[-1,0],[-1,1],[-1,-1]]
+                             ^ (bad-whitespace)
+cve.py:109:32: C0326: Exactly one space required after comma
+    increment = [[0,1],[0,-1],[1,0],[1,1],[1,-1],[-1,0],[-1,1],[-1,-1]]
+                                ^ (bad-whitespace)
+cve.py:109:35: C0326: Exactly one space required after comma
+    increment = [[0,1],[0,-1],[1,0],[1,1],[1,-1],[-1,0],[-1,1],[-1,-1]]
+                                   ^ (bad-whitespace)
+cve.py:109:38: C0326: Exactly one space required after comma
+    increment = [[0,1],[0,-1],[1,0],[1,1],[1,-1],[-1,0],[-1,1],[-1,-1]]
+                                      ^ (bad-whitespace)
+cve.py:109:41: C0326: Exactly one space required after comma
+    increment = [[0,1],[0,-1],[1,0],[1,1],[1,-1],[-1,0],[-1,1],[-1,-1]]
+                                         ^ (bad-whitespace)
+cve.py:109:44: C0326: Exactly one space required after comma
+    increment = [[0,1],[0,-1],[1,0],[1,1],[1,-1],[-1,0],[-1,1],[-1,-1]]
+                                            ^ (bad-whitespace)
+cve.py:109:48: C0326: Exactly one space required after comma
+    increment = [[0,1],[0,-1],[1,0],[1,1],[1,-1],[-1,0],[-1,1],[-1,-1]]
+                                                ^ (bad-whitespace)
+cve.py:109:52: C0326: Exactly one space required after comma
+    increment = [[0,1],[0,-1],[1,0],[1,1],[1,-1],[-1,0],[-1,1],[-1,-1]]
+                                                    ^ (bad-whitespace)
+cve.py:109:55: C0326: Exactly one space required after comma
+    increment = [[0,1],[0,-1],[1,0],[1,1],[1,-1],[-1,0],[-1,1],[-1,-1]]
+                                                       ^ (bad-whitespace)
+cve.py:109:59: C0326: Exactly one space required after comma
+    increment = [[0,1],[0,-1],[1,0],[1,1],[1,-1],[-1,0],[-1,1],[-1,-1]]
+                                                           ^ (bad-whitespace)
+cve.py:109:62: C0326: Exactly one space required after comma
+    increment = [[0,1],[0,-1],[1,0],[1,1],[1,-1],[-1,0],[-1,1],[-1,-1]]
+                                                              ^ (bad-whitespace)
+cve.py:109:66: C0326: Exactly one space required after comma
+    increment = [[0,1],[0,-1],[1,0],[1,1],[1,-1],[-1,0],[-1,1],[-1,-1]]
+                                                                  ^ (bad-whitespace)
+cve.py:112:35: C0326: Exactly one space required after comma
+            if in_piece_list(yourteam,CHESSBOARD[y+increment[point][1]][x+increment[point][0]]):
+                                   ^ (bad-whitespace)
+cve.py:113:37: C0326: Exactly one space required after comma
+                return king_movement(x,y,yourteam,enemyteam,point+1)
+                                     ^ (bad-whitespace)
+cve.py:113:39: C0326: Exactly one space required after comma
+                return king_movement(x,y,yourteam,enemyteam,point+1)
+                                       ^ (bad-whitespace)
+cve.py:113:48: C0326: Exactly one space required after comma
+                return king_movement(x,y,yourteam,enemyteam,point+1)
+                                                ^ (bad-whitespace)
+cve.py:113:58: C0326: Exactly one space required after comma
+                return king_movement(x,y,yourteam,enemyteam,point+1)
+                                                          ^ (bad-whitespace)
+cve.py:115:0: C0301: Line too long (128/100) (line-too-long)
+cve.py:115:98: C0326: Exactly one space required after comma
+                return CHESSBOARD[y+increment[point][1]][x+increment[point][0]]+' '+king_movement(x,y,yourteam,enemyteam,point+1)
+                                                                                                  ^ (bad-whitespace)
+cve.py:115:100: C0326: Exactly one space required after comma
+                return CHESSBOARD[y+increment[point][1]][x+increment[point][0]]+' '+king_movement(x,y,yourteam,enemyteam,point+1)
+                                                                                                    ^ (bad-whitespace)
+cve.py:115:109: C0326: Exactly one space required after comma
+                return CHESSBOARD[y+increment[point][1]][x+increment[point][0]]+' '+king_movement(x,y,yourteam,enemyteam,point+1)
+                                                                                                             ^ (bad-whitespace)
+cve.py:115:119: C0326: Exactly one space required after comma
+                return CHESSBOARD[y+increment[point][1]][x+increment[point][0]]+' '+king_movement(x,y,yourteam,enemyteam,point+1)
+                                                                                                                       ^ (bad-whitespace)
+cve.py:117:46: C0326: Exactly one space required after comma
+            return king_movement(x, y, yourteam,enemyteam,point + 1)
+                                              ^ (bad-whitespace)
+cve.py:117:56: C0326: Exactly one space required after comma
+            return king_movement(x, y, yourteam,enemyteam,point + 1)
+                                                        ^ (bad-whitespace)
+cve.py:123:0: W0311: Bad indentation. Found 8 spaces, expected 4 (bad-indentation)
+cve.py:124:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:125:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:125:71: C0326: Exactly one space required around assignment
+            CHESSBOARD[8-int(plsplit[2])][give_column_number(plsplit[1])]=piece
+                                                                       ^ (bad-whitespace)
+cve.py:126:0: W0311: Bad indentation. Found 8 spaces, expected 4 (bad-indentation)
+cve.py:127:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:128:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:128:71: C0326: Exactly one space required around assignment
+            CHESSBOARD[8-int(plsplit[2])][give_column_number(plsplit[1])]=piece
+                                                                       ^ (bad-whitespace)
+cve.py:129:0: W0311: Bad indentation. Found 8 spaces, expected 4 (bad-indentation)
+cve.py:129:24: C0326: Exactly one space required after comma
+        for i in range(0,len(CHESSBOARD)):
+                        ^ (bad-whitespace)
+cve.py:130:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:130:28: C0326: Exactly one space required after comma
+            for j in range(0,len(CHESSBOARD[i])):
+                            ^ (bad-whitespace)
+cve.py:131:0: W0311: Bad indentation. Found 16 spaces, expected 12 (bad-indentation)
+cve.py:132:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:134:0: W0311: Bad indentation. Found 8 spaces, expected 4 (bad-indentation)
+cve.py:134:0: C0325: Unnecessary parens after 'if' keyword (superfluous-parens)
+cve.py:135:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:135:21: C0326: Exactly one space required after assignment
+            movement =  1
+                     ^ (bad-whitespace)
+cve.py:136:0: W0311: Bad indentation. Found 8 spaces, expected 4 (bad-indentation)
+cve.py:136:0: C0325: Unnecessary parens after 'elif' keyword (superfluous-parens)
+cve.py:137:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:138:0: W0311: Bad indentation. Found 8 spaces, expected 4 (bad-indentation)
+cve.py:139:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:140:0: W0311: Bad indentation. Found 8 spaces, expected 4 (bad-indentation)
+cve.py:142:0: W0311: Bad indentation. Found 8 spaces, expected 4 (bad-indentation)
+cve.py:143:0: W0311: Bad indentation. Found 8 spaces, expected 4 (bad-indentation)
+cve.py:144:0: W0311: Bad indentation. Found 8 spaces, expected 4 (bad-indentation)
+cve.py:144:23: C0326: Exactly one space required after comma
+        print("Moves: ",end="",flush=True)
+                       ^ (bad-whitespace)
+cve.py:144:30: C0326: Exactly one space required after comma
+        print("Moves: ",end="",flush=True)
+                              ^ (bad-whitespace)
+cve.py:146:0: W0311: Bad indentation. Found 8 spaces, expected 4 (bad-indentation)
+cve.py:146:0: C0325: Unnecessary parens after 'if' keyword (superfluous-parens)
+cve.py:147:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:148:0: W0311: Bad indentation. Found 16 spaces, expected 12 (bad-indentation)
+cve.py:149:0: W0311: Bad indentation. Found 20 spaces, expected 16 (bad-indentation)
+cve.py:149:70: C0326: Exactly one space required after comma
+                    print(CHESSBOARD[8 - (y + movement + movement)][x],end=" ",flush=True)
+                                                                      ^ (bad-whitespace)
+cve.py:149:78: C0326: Exactly one space required after comma
+                    print(CHESSBOARD[8 - (y + movement + movement)][x],end=" ",flush=True)
+                                                                              ^ (bad-whitespace)
+cve.py:150:0: W0311: Bad indentation. Found 16 spaces, expected 12 (bad-indentation)
+cve.py:151:0: W0311: Bad indentation. Found 20 spaces, expected 16 (bad-indentation)
+cve.py:151:46: C0326: Exactly one space required after comma
+                    print(CHESSBOARD[7-y][x+1],end=" ",flush=True)
+                                              ^ (bad-whitespace)
+cve.py:151:54: C0326: Exactly one space required after comma
+                    print(CHESSBOARD[7-y][x+1],end=" ",flush=True)
+                                                      ^ (bad-whitespace)
+cve.py:152:0: W0311: Bad indentation. Found 16 spaces, expected 12 (bad-indentation)
+cve.py:153:0: W0311: Bad indentation. Found 20 spaces, expected 16 (bad-indentation)
+cve.py:153:46: C0326: Exactly one space required after comma
+                    print(CHESSBOARD[7-y][x-1],end=" ",flush=True)
+                                              ^ (bad-whitespace)
+cve.py:153:54: C0326: Exactly one space required after comma
+                    print(CHESSBOARD[7-y][x-1],end=" ",flush=True)
+                                                      ^ (bad-whitespace)
+cve.py:154:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:155:0: W0311: Bad indentation. Found 16 spaces, expected 12 (bad-indentation)
+cve.py:156:0: W0311: Bad indentation. Found 20 spaces, expected 16 (bad-indentation)
+cve.py:157:0: W0311: Bad indentation. Found 16 spaces, expected 12 (bad-indentation)
+cve.py:158:0: W0311: Bad indentation. Found 20 spaces, expected 16 (bad-indentation)
+cve.py:158:46: C0326: Exactly one space required after comma
+                    print(CHESSBOARD[9-y][x+1],end=" ",flush=True)
+                                              ^ (bad-whitespace)
+cve.py:158:54: C0326: Exactly one space required after comma
+                    print(CHESSBOARD[9-y][x+1],end=" ",flush=True)
+                                                      ^ (bad-whitespace)
+cve.py:159:0: W0311: Bad indentation. Found 16 spaces, expected 12 (bad-indentation)
+cve.py:160:0: W0311: Bad indentation. Found 20 spaces, expected 16 (bad-indentation)
+cve.py:160:46: C0326: Exactly one space required after comma
+                    print(CHESSBOARD[9-y][x-1],end=" ",flush=True)
+                                              ^ (bad-whitespace)
+cve.py:160:54: C0326: Exactly one space required after comma
+                    print(CHESSBOARD[9-y][x-1],end=" ",flush=True)
+                                                      ^ (bad-whitespace)
+cve.py:161:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:162:0: C0301: Line too long (121/100) (line-too-long)
+cve.py:162:0: W0311: Bad indentation. Found 16 spaces, expected 12 (bad-indentation)
+cve.py:163:0: W0311: Bad indentation. Found 20 spaces, expected 16 (bad-indentation)
+cve.py:163:55: C0326: Exactly one space required after comma
+                    print(CHESSBOARD[8-(y+movement)][x],end=" ",flush=True)
+                                                       ^ (bad-whitespace)
+cve.py:163:63: C0326: Exactly one space required after comma
+                    print(CHESSBOARD[8-(y+movement)][x],end=" ",flush=True)
+                                                               ^ (bad-whitespace)
+cve.py:165:0: W0311: Bad indentation. Found 8 spaces, expected 4 (bad-indentation)
+cve.py:166:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:167:0: W0311: Bad indentation. Found 16 spaces, expected 12 (bad-indentation)
+cve.py:168:0: W0311: Bad indentation. Found 20 spaces, expected 16 (bad-indentation)
+cve.py:168:39: C0326: Exactly one space required after comma
+                    if in_piece_list(team,CHESSBOARD[8 - (y + (movement * 2))] [x + 1]) is False:
+                                       ^ (bad-whitespace)
+cve.py:168:77: C0326: No space allowed before bracket
+                    if in_piece_list(team,CHESSBOARD[8 - (y + (movement * 2))] [x + 1]) is False:
+                                                                             ^ (bad-whitespace)
+cve.py:169:0: W0311: Bad indentation. Found 24 spaces, expected 20 (bad-indentation)
+cve.py:169:67: C0326: No space allowed before bracket
+                        print(CHESSBOARD[8 - (y + (movement * 2))] [x + 1],end=" ",flush=True)
+                                                                   ^ (bad-whitespace)
+cve.py:169:74: C0326: Exactly one space required after comma
+                        print(CHESSBOARD[8 - (y + (movement * 2))] [x + 1],end=" ",flush=True)
+                                                                          ^ (bad-whitespace)
+cve.py:169:82: C0326: Exactly one space required after comma
+                        print(CHESSBOARD[8 - (y + (movement * 2))] [x + 1],end=" ",flush=True)
+                                                                                  ^ (bad-whitespace)
+cve.py:170:0: W0311: Bad indentation. Found 16 spaces, expected 12 (bad-indentation)
+cve.py:171:0: W0311: Bad indentation. Found 20 spaces, expected 16 (bad-indentation)
+cve.py:171:39: C0326: Exactly one space required after comma
+                    if in_piece_list(team,CHESSBOARD[8 - (y + (movement * 2))] is False):
+                                       ^ (bad-whitespace)
+cve.py:172:0: W0311: Bad indentation. Found 24 spaces, expected 20 (bad-indentation)
+cve.py:172:67: C0326: No space allowed before bracket
+                        print(CHESSBOARD[8 - (y + (movement * 2))] [x - 1],end=" ",flush=True)
+                                                                   ^ (bad-whitespace)
+cve.py:172:74: C0326: Exactly one space required after comma
+                        print(CHESSBOARD[8 - (y + (movement * 2))] [x - 1],end=" ",flush=True)
+                                                                          ^ (bad-whitespace)
+cve.py:172:82: C0326: Exactly one space required after comma
+                        print(CHESSBOARD[8 - (y + (movement * 2))] [x - 1],end=" ",flush=True)
+                                                                                  ^ (bad-whitespace)
+cve.py:173:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:174:0: W0311: Bad indentation. Found 16 spaces, expected 12 (bad-indentation)
+cve.py:175:0: W0311: Bad indentation. Found 20 spaces, expected 16 (bad-indentation)
+cve.py:175:39: C0326: Exactly one space required after comma
+                    if in_piece_list(team,CHESSBOARD[8 - (y + (movement * -2))][x + 1]) is False:
+                                       ^ (bad-whitespace)
+cve.py:176:0: W0311: Bad indentation. Found 24 spaces, expected 20 (bad-indentation)
+cve.py:176:74: C0326: Exactly one space required after comma
+                        print(CHESSBOARD[8 - (y + (movement * -2))][x + 1],end=" ",flush=True)
+                                                                          ^ (bad-whitespace)
+cve.py:176:82: C0326: Exactly one space required after comma
+                        print(CHESSBOARD[8 - (y + (movement * -2))][x + 1],end=" ",flush=True)
+                                                                                  ^ (bad-whitespace)
+cve.py:177:0: W0311: Bad indentation. Found 16 spaces, expected 12 (bad-indentation)
+cve.py:178:0: W0311: Bad indentation. Found 20 spaces, expected 16 (bad-indentation)
+cve.py:179:0: W0311: Bad indentation. Found 24 spaces, expected 20 (bad-indentation)
+cve.py:179:74: C0326: Exactly one space required after comma
+                        print(CHESSBOARD[8 - (y + (movement * -2))][x - 1],end=" ",flush=True)
+                                                                          ^ (bad-whitespace)
+cve.py:179:82: C0326: Exactly one space required after comma
+                        print(CHESSBOARD[8 - (y + (movement * -2))][x - 1],end=" ",flush=True)
+                                                                                  ^ (bad-whitespace)
+cve.py:180:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:180:49: C0326: No space allowed before :
+            if in_range(8 - (y + (movement * 1))) :
+                                                 ^ (bad-whitespace)
+cve.py:181:0: W0311: Bad indentation. Found 16 spaces, expected 12 (bad-indentation)
+cve.py:182:0: W0311: Bad indentation. Found 20 spaces, expected 16 (bad-indentation)
+cve.py:182:39: C0326: Exactly one space required after comma
+                    if in_piece_list(team,CHESSBOARD[8 - (y + (movement * 1))] [x - 2]) is False:
+                                       ^ (bad-whitespace)
+cve.py:182:77: C0326: No space allowed before bracket
+                    if in_piece_list(team,CHESSBOARD[8 - (y + (movement * 1))] [x - 2]) is False:
+                                                                             ^ (bad-whitespace)
+cve.py:183:0: W0311: Bad indentation. Found 24 spaces, expected 20 (bad-indentation)
+cve.py:183:67: C0326: No space allowed before bracket
+                        print(CHESSBOARD[8 - (y + (movement * 1))] [x - 2],end=" ",flush=True)
+                                                                   ^ (bad-whitespace)
+cve.py:183:74: C0326: Exactly one space required after comma
+                        print(CHESSBOARD[8 - (y + (movement * 1))] [x - 2],end=" ",flush=True)
+                                                                          ^ (bad-whitespace)
+cve.py:183:82: C0326: Exactly one space required after comma
+                        print(CHESSBOARD[8 - (y + (movement * 1))] [x - 2],end=" ",flush=True)
+                                                                                  ^ (bad-whitespace)
+cve.py:184:0: W0311: Bad indentation. Found 16 spaces, expected 12 (bad-indentation)
+cve.py:185:0: W0311: Bad indentation. Found 20 spaces, expected 16 (bad-indentation)
+cve.py:186:0: W0311: Bad indentation. Found 24 spaces, expected 20 (bad-indentation)
+cve.py:186:67: C0326: No space allowed before bracket
+                        print(CHESSBOARD[8 - (y + (movement * 1))] [x + 2],end=" ",flush=True)
+                                                                   ^ (bad-whitespace)
+cve.py:186:74: C0326: Exactly one space required after comma
+                        print(CHESSBOARD[8 - (y + (movement * 1))] [x + 2],end=" ",flush=True)
+                                                                          ^ (bad-whitespace)
+cve.py:186:82: C0326: Exactly one space required after comma
+                        print(CHESSBOARD[8 - (y + (movement * 1))] [x + 2],end=" ",flush=True)
+                                                                                  ^ (bad-whitespace)
+cve.py:187:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:188:0: W0311: Bad indentation. Found 16 spaces, expected 12 (bad-indentation)
+cve.py:189:0: W0311: Bad indentation. Found 20 spaces, expected 16 (bad-indentation)
+cve.py:189:39: C0326: Exactly one space required after comma
+                    if in_piece_list(team,CHESSBOARD[8 - (y + (movement * -1))][x + 2]) is False:
+                                       ^ (bad-whitespace)
+cve.py:190:0: W0311: Bad indentation. Found 24 spaces, expected 20 (bad-indentation)
+cve.py:190:74: C0326: Exactly one space required after comma
+                        print(CHESSBOARD[8 - (y + (movement * -1))][x + 2],end=" ",flush=True)
+                                                                          ^ (bad-whitespace)
+cve.py:190:82: C0326: Exactly one space required after comma
+                        print(CHESSBOARD[8 - (y + (movement * -1))][x + 2],end=" ",flush=True)
+                                                                                  ^ (bad-whitespace)
+cve.py:191:0: W0311: Bad indentation. Found 16 spaces, expected 12 (bad-indentation)
+cve.py:192:0: W0311: Bad indentation. Found 20 spaces, expected 16 (bad-indentation)
+cve.py:193:0: W0311: Bad indentation. Found 24 spaces, expected 20 (bad-indentation)
+cve.py:193:74: C0326: Exactly one space required after comma
+                        print(CHESSBOARD[8 - (y + (movement * -1))][x - 2],end=" ",flush=True)
+                                                                          ^ (bad-whitespace)
+cve.py:193:82: C0326: Exactly one space required after comma
+                        print(CHESSBOARD[8 - (y + (movement * -1))][x - 2],end=" ",flush=True)
+                                                                                  ^ (bad-whitespace)
+cve.py:195:0: W0311: Bad indentation. Found 8 spaces, expected 4 (bad-indentation)
+cve.py:196:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:196:32: C0326: Exactly one space required after comma
+            print(rook_movement(x,y,'x',1,movement,team),end=' ',flush=True)
+                                ^ (bad-whitespace)
+cve.py:196:34: C0326: Exactly one space required after comma
+            print(rook_movement(x,y,'x',1,movement,team),end=' ',flush=True)
+                                  ^ (bad-whitespace)
+cve.py:196:38: C0326: Exactly one space required after comma
+            print(rook_movement(x,y,'x',1,movement,team),end=' ',flush=True)
+                                      ^ (bad-whitespace)
+cve.py:196:40: C0326: Exactly one space required after comma
+            print(rook_movement(x,y,'x',1,movement,team),end=' ',flush=True)
+                                        ^ (bad-whitespace)
+cve.py:196:49: C0326: Exactly one space required after comma
+            print(rook_movement(x,y,'x',1,movement,team),end=' ',flush=True)
+                                                 ^ (bad-whitespace)
+cve.py:196:55: C0326: Exactly one space required after comma
+            print(rook_movement(x,y,'x',1,movement,team),end=' ',flush=True)
+                                                       ^ (bad-whitespace)
+cve.py:196:63: C0326: Exactly one space required after comma
+            print(rook_movement(x,y,'x',1,movement,team),end=' ',flush=True)
+                                                               ^ (bad-whitespace)
+cve.py:197:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:198:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:199:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:201:0: W0311: Bad indentation. Found 8 spaces, expected 4 (bad-indentation)
+cve.py:202:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:202:34: C0326: Exactly one space required after comma
+            print(BishopMovement(x,y,1,1,movement,team),end=' ',flush=True)
+                                  ^ (bad-whitespace)
+cve.py:202:36: C0326: Exactly one space required after comma
+            print(BishopMovement(x,y,1,1,movement,team),end=' ',flush=True)
+                                    ^ (bad-whitespace)
+cve.py:202:38: C0326: Exactly one space required after comma
+            print(BishopMovement(x,y,1,1,movement,team),end=' ',flush=True)
+                                      ^ (bad-whitespace)
+cve.py:202:40: C0326: Exactly one space required after comma
+            print(BishopMovement(x,y,1,1,movement,team),end=' ',flush=True)
+                                        ^ (bad-whitespace)
+cve.py:202:49: C0326: Exactly one space required after comma
+            print(BishopMovement(x,y,1,1,movement,team),end=' ',flush=True)
+                                                 ^ (bad-whitespace)
+cve.py:202:55: C0326: Exactly one space required after comma
+            print(BishopMovement(x,y,1,1,movement,team),end=' ',flush=True)
+                                                       ^ (bad-whitespace)
+cve.py:202:63: C0326: Exactly one space required after comma
+            print(BishopMovement(x,y,1,1,movement,team),end=' ',flush=True)
+                                                               ^ (bad-whitespace)
+cve.py:203:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:203:34: C0326: Exactly one space required after comma
+            print(BishopMovement(x,y,1,-1, movement, team), end=' ', flush=True)
+                                  ^ (bad-whitespace)
+cve.py:203:36: C0326: Exactly one space required after comma
+            print(BishopMovement(x,y,1,-1, movement, team), end=' ', flush=True)
+                                    ^ (bad-whitespace)
+cve.py:203:38: C0326: Exactly one space required after comma
+            print(BishopMovement(x,y,1,-1, movement, team), end=' ', flush=True)
+                                      ^ (bad-whitespace)
+cve.py:204:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:205:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:206:0: W0311: Bad indentation. Found 8 spaces, expected 4 (bad-indentation)
+cve.py:207:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:207:32: C0326: Exactly one space required after comma
+            print(rook_movement(x,y,'x',1,movement,team),end=' ',flush=True)
+                                ^ (bad-whitespace)
+cve.py:207:34: C0326: Exactly one space required after comma
+            print(rook_movement(x,y,'x',1,movement,team),end=' ',flush=True)
+                                  ^ (bad-whitespace)
+cve.py:207:38: C0326: Exactly one space required after comma
+            print(rook_movement(x,y,'x',1,movement,team),end=' ',flush=True)
+                                      ^ (bad-whitespace)
+cve.py:207:40: C0326: Exactly one space required after comma
+            print(rook_movement(x,y,'x',1,movement,team),end=' ',flush=True)
+                                        ^ (bad-whitespace)
+cve.py:207:49: C0326: Exactly one space required after comma
+            print(rook_movement(x,y,'x',1,movement,team),end=' ',flush=True)
+                                                 ^ (bad-whitespace)
+cve.py:207:55: C0326: Exactly one space required after comma
+            print(rook_movement(x,y,'x',1,movement,team),end=' ',flush=True)
+                                                       ^ (bad-whitespace)
+cve.py:207:63: C0326: Exactly one space required after comma
+            print(rook_movement(x,y,'x',1,movement,team),end=' ',flush=True)
+                                                               ^ (bad-whitespace)
+cve.py:208:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:209:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:210:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:211:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:211:34: C0326: Exactly one space required after comma
+            print(BishopMovement(x,y,1,1,movement,team),end=' ',flush=True)
+                                  ^ (bad-whitespace)
+cve.py:211:36: C0326: Exactly one space required after comma
+            print(BishopMovement(x,y,1,1,movement,team),end=' ',flush=True)
+                                    ^ (bad-whitespace)
+cve.py:211:38: C0326: Exactly one space required after comma
+            print(BishopMovement(x,y,1,1,movement,team),end=' ',flush=True)
+                                      ^ (bad-whitespace)
+cve.py:211:40: C0326: Exactly one space required after comma
+            print(BishopMovement(x,y,1,1,movement,team),end=' ',flush=True)
+                                        ^ (bad-whitespace)
+cve.py:211:49: C0326: Exactly one space required after comma
+            print(BishopMovement(x,y,1,1,movement,team),end=' ',flush=True)
+                                                 ^ (bad-whitespace)
+cve.py:211:55: C0326: Exactly one space required after comma
+            print(BishopMovement(x,y,1,1,movement,team),end=' ',flush=True)
+                                                       ^ (bad-whitespace)
+cve.py:211:63: C0326: Exactly one space required after comma
+            print(BishopMovement(x,y,1,1,movement,team),end=' ',flush=True)
+                                                               ^ (bad-whitespace)
+cve.py:212:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:212:34: C0326: Exactly one space required after comma
+            print(BishopMovement(x,y,1,-1, movement, team), end=' ', flush=True)
+                                  ^ (bad-whitespace)
+cve.py:212:36: C0326: Exactly one space required after comma
+            print(BishopMovement(x,y,1,-1, movement, team), end=' ', flush=True)
+                                    ^ (bad-whitespace)
+cve.py:212:38: C0326: Exactly one space required after comma
+            print(BishopMovement(x,y,1,-1, movement, team), end=' ', flush=True)
+                                      ^ (bad-whitespace)
+cve.py:213:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:214:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:215:0: W0311: Bad indentation. Found 8 spaces, expected 4 (bad-indentation)
+cve.py:216:0: W0311: Bad indentation. Found 12 spaces, expected 8 (bad-indentation)
+cve.py:216:32: C0326: Exactly one space required after comma
+            print(king_movement(x,y,movement,team))
+                                ^ (bad-whitespace)
+cve.py:216:34: C0326: Exactly one space required after comma
+            print(king_movement(x,y,movement,team))
+                                  ^ (bad-whitespace)
+cve.py:216:43: C0326: Exactly one space required after comma
+            print(king_movement(x,y,movement,team))
+                                           ^ (bad-whitespace)
+cve.py:220:38: C0326: No space allowed around keyword argument assignment
+    parser.add_argument('white', help = "white pieces [KQRBNP][a-h][1-8],...", type = str)
+                                      ^ (bad-whitespace)
+cve.py:220:84: C0326: No space allowed around keyword argument assignment
+    parser.add_argument('white', help = "white pieces [KQRBNP][a-h][1-8],...", type = str)
+                                                                                    ^ (bad-whitespace)
+cve.py:221:38: C0326: No space allowed around keyword argument assignment
+    parser.add_argument('black', help = 'Black pieces [KQRBNP][a-h][1-8],...', type = str)
+                                      ^ (bad-whitespace)
+cve.py:221:84: C0326: No space allowed around keyword argument assignment
+    parser.add_argument('black', help = 'Black pieces [KQRBNP][a-h][1-8],...', type = str)
+                                                                                    ^ (bad-whitespace)
+cve.py:222:38: C0326: No space allowed around keyword argument assignment
+    parser.add_argument('piece', help = 'the moving piece [KQRBNP][a-h][1-8]', type = str)
+                                      ^ (bad-whitespace)
+cve.py:222:84: C0326: No space allowed around keyword argument assignment
+    parser.add_argument('piece', help = 'the moving piece [KQRBNP][a-h][1-8]', type = str)
+                                                                                    ^ (bad-whitespace)
+cve.py:229:12: C0326: Exactly one space required around assignment
+    WhiteSet=validate(args.white)
+            ^ (bad-whitespace)
+cve.py:230:12: C0326: Exactly one space required around assignment
+    BlackSet=validate(args.black)
+            ^ (bad-whitespace)
+cve.py:231:15: C0326: Exactly one space required around assignment
+    MovingPiece=validate(args.piece,1)
+               ^ (bad-whitespace)
+cve.py:231:35: C0326: Exactly one space required after comma
+    MovingPiece=validate(args.piece,1)
+                                   ^ (bad-whitespace)
+cve.py:234:20: C0326: Exactly one space required after assignment
+        WhitePieces =args.white.split(',')
+                    ^ (bad-whitespace)
+cve.py:239:0: C0304: Final newline missing (missing-final-newline)
+cve.py:1:0: C0111: Missing module docstring (missing-docstring)
+cve.py:5:0: C0111: Missing class docstring (missing-docstring)
+cve.py:15:0: C0111: Missing class docstring (missing-docstring)
+cve.py:33:0: C0103: Function name "in_range" doesn't conform to snake_case naming style (invalid-name)
+cve.py:33:0: C0111: Missing function docstring (missing-docstring)
+cve.py:34:7: R1716: Simplify chained comparison between the operands (chained-comparison)
+cve.py:37:0: C0103: Function name "in_piece_list" doesn't conform to snake_case naming style (invalid-name)
+cve.py:37:0: C0111: Missing function docstring (missing-docstring)
+cve.py:38:4: R1705: Unnecessary "else" after "return" (no-else-return)
+cve.py:47:0: C0103: Function name "give_column_number" doesn't conform to snake_case naming style (invalid-name)
+cve.py:47:0: C0111: Missing function docstring (missing-docstring)
+cve.py:48:4: R1705: Unnecessary "elif" after "return" (no-else-return)
+cve.py:47:0: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+cve.py:47:0: R0911: Too many return statements (8/6) (too-many-return-statements)
+cve.py:65:0: C0111: Missing function docstring (missing-docstring)
+cve.py:72:0: C0103: Function name "rook_movement" doesn't conform to snake_case naming style (invalid-name)
+cve.py:72:0: C0103: Argument name "x" doesn't conform to snake_case naming style (invalid-name)
+cve.py:72:0: C0103: Argument name "y" doesn't conform to snake_case naming style (invalid-name)
+cve.py:72:0: C0111: Missing function docstring (missing-docstring)
+cve.py:72:0: R0913: Too many arguments (6/5) (too-many-arguments)
+cve.py:73:4: R1705: Unnecessary "elif" after "return" (no-else-return)
+cve.py:73:7: R0123: Comparison to literal (literal-comparison)
+cve.py:74:8: R1705: Unnecessary "else" after "return" (no-else-return)
+cve.py:75:12: R1705: Unnecessary "elif" after "return" (no-else-return)
+cve.py:83:9: R0123: Comparison to literal (literal-comparison)
+cve.py:84:8: R1705: Unnecessary "else" after "return" (no-else-return)
+cve.py:85:12: R1705: Unnecessary "elif" after "return" (no-else-return)
+cve.py:72:0: R0911: Too many return statements (9/6) (too-many-return-statements)
+cve.py:95:0: C0103: Function name "BishopMovement" doesn't conform to snake_case naming style (invalid-name)
+cve.py:95:0: C0103: Argument name "x" doesn't conform to snake_case naming style (invalid-name)
+cve.py:95:0: C0103: Argument name "y" doesn't conform to snake_case naming style (invalid-name)
+cve.py:95:0: C0111: Missing function docstring (missing-docstring)
+cve.py:95:0: R0913: Too many arguments (6/5) (too-many-arguments)
+cve.py:96:4: R1705: Unnecessary "else" after "return" (no-else-return)
+cve.py:97:8: R1705: Unnecessary "elif" after "return" (no-else-return)
+cve.py:102:12: C0103: Variable name "h" doesn't conform to snake_case naming style (invalid-name)
+cve.py:103:12: C0103: Variable name "d" doesn't conform to snake_case naming style (invalid-name)
+cve.py:102:12: W0612: Unused variable 'h' (unused-variable)
+cve.py:103:12: W0612: Unused variable 'd' (unused-variable)
+cve.py:108:0: C0103: Function name "king_movement" doesn't conform to snake_case naming style (invalid-name)
+cve.py:108:0: C0103: Argument name "x" doesn't conform to snake_case naming style (invalid-name)
+cve.py:108:0: C0103: Argument name "y" doesn't conform to snake_case naming style (invalid-name)
+cve.py:108:0: C0111: Missing function docstring (missing-docstring)
+cve.py:110:4: R1705: Unnecessary "else" after "return" (no-else-return)
+cve.py:111:8: R1705: Unnecessary "else" after "return" (no-else-return)
+cve.py:112:12: R1705: Unnecessary "else" after "return" (no-else-return)
+cve.py:123:12: W0621: Redefining name 'piece' from outer scope (line 227) (redefined-outer-name)
+cve.py:121:0: C0103: Function name "Main" doesn't conform to snake_case naming style (invalid-name)
+cve.py:121:0: C0111: Missing function docstring (missing-docstring)
+cve.py:129:8: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)
+cve.py:142:8: C0103: Variable name "x" doesn't conform to snake_case naming style (invalid-name)
+cve.py:143:8: C0103: Variable name "y" doesn't conform to snake_case naming style (invalid-name)
+cve.py:148:19: R0123: Comparison to literal (literal-comparison)
+cve.py:121:0: R0912: Too many branches (43/12) (too-many-branches)
+cve.py:121:0: R0915: Too many statements (85/50) (too-many-statements)
+cve.py:219:4: C0103: Constant name "parser" doesn't conform to UPPER_CASE naming style (invalid-name)
+cve.py:224:4: C0103: Constant name "args" doesn't conform to UPPER_CASE naming style (invalid-name)
+cve.py:227:4: C0103: Constant name "piece" doesn't conform to UPPER_CASE naming style (invalid-name)
+cve.py:229:4: C0103: Constant name "WhiteSet" doesn't conform to UPPER_CASE naming style (invalid-name)
+cve.py:230:4: C0103: Constant name "BlackSet" doesn't conform to UPPER_CASE naming style (invalid-name)
+cve.py:231:4: C0103: Constant name "MovingPiece" doesn't conform to UPPER_CASE naming style (invalid-name)
+cve.py:234:8: C0103: Constant name "WhitePieces" doesn't conform to UPPER_CASE naming style (invalid-name)
+cve.py:235:8: C0103: Constant name "BlackPieces" doesn't conform to UPPER_CASE naming style (invalid-name)
+cve.py:236:8: C0103: Constant name "PieceToMove" doesn't conform to UPPER_CASE naming style (invalid-name)
+
+----------------------------------------------------------------------
+Your code has been rated at -10.21/10 (previous run: -10.62/10, +0.41)
+
+
+Process finished with exit code 28
