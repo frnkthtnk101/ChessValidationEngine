@@ -1,0 +1,28 @@
+white	Black	Piece	Results
+Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Pa4	a5 Pb5
+Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Pc4	Pc5 Pd5 pb5
+Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Pc3	
+Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Pe4	
+Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Pe8	
+Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Pf4	f5
+Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Pf2	f3
+Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Ph4	h5 Pg5
+Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Pe7	e6
+Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Pd6	
+Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Pb5	b4 pc4 pa4
+Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Pd5	Pd4 Pe4 Pc4
+Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Pe5	Pf4
+Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Pe1	
+Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Pg5	g4 h4 f4
+Nh8,Pd8,Pf7,Pb6,Re5,Ph5,Pa4,Pg3,Pc2,Pe1,Nh1	Na8,Pe8,Pc7,Pf6,Pa5,Rd4,Ph4,Pb3,Pf2,Na1,Pd1	Nh8	g6
+Nh8,Pd8,Pf7,Pb6,Re5,Ph5,Pa4,Pg3,Pc2,Pe1,Nh1	Na8,Pe8,Pc7,Pf6,Pa5,Rd4,Ph4,Pb3,Pf2,Na1,Pd1	Re5	Pa5 b5 c5 d5 f5 g5 e4 e3 e2 e6 e7 Pe8
+Nh8,Pd8,Pf7,Pb6,Re5,Ph5,Pa4,Pg3,Pc2,Pe1,Nh1	Na8,Pe8,Pc7,Pf6,Pa5,Rd4,Ph4,Pb3,Pf2,Na1,Pd1	Nh1	Pf2
+Nh8,Pd8,Pf7,Pb6,Re5,Ph5,Pa4,Pg3,Pc2,Pe1,Nh1	Na8,Pe8,Pc7,Pf6,Pa5,Rd4,Ph4,Pb3,Pf2,Na1,Pd1	Na8	Pb6
+Nh8,Pd8,Pf7,Pb6,Re5,Ph5,Pa4,Pg3,Pc2,Pe1,Nh1	Na8,Pe8,Pc7,Pf6,Pa5,Rd4,Ph4,Pb3,Pf2,Na1,Pd1	Rd4	e4 f5 g5 c5 b5 Pa4 d3 d2 d5 d6 d7 Pd8
+Nh8,Pd8,Pf7,Pb6,Re5,Ph5,Pa4,Pg3,Pc2,Pe1,Nh1	Na8,Pe8,Pc7,Pf6,Pa5,Rd4,Ph4,Pb3,Pf2,Na1,Pd1	Na1	Pc2
+Pd8,Pf7,Pb6,Ph5,Pa4,Pg3,Pc2,Pe1,Qc3,Be3	Pe8,Pc7,Pf6,Pa5,Ph4,Pb3,Pf2,Pd1,Qb5,Bd5	Qc3	Pb3 b2 a1 b4 a5 c4 c5 c6 Pc7 d4 e5 f6 g7 h8 d3 d2
+Pd8,Pf7,Pb6,Ph5,Pa4,Pg3,Pc2,Pe1,Qc3,Be3	Pe8,Pc7,Pf6,Pa5,Ph4,Pb3,Pf2,Pd1,Qb5,Bd5	Be3	Pf2 d4 c5 d2 c1 f4 g5 h5
+Pd8,Pf7,Pb6,Ph5,Pa4,Pg3,Pc2,Pe1,Qc3,Be3	Pe8,Pc7,Pf6,Pa5,Ph4,Pb3,Pf2,Pd1,Qb5,Bd5	Qb5	Pa4 b4 c4 d3 e2 f1 d3 d4 e5 f6 g7 h8 c4 c5 c6 Pc7 Pa5
+Pd8,Pf7,Pb6,Ph5,Pa4,Pg3,Pc2,Pe1,Qc3,Be3	Pe8,Pc7,Pf6,Pa5,Ph4,Pb3,Pf2,Pd1,Qb5,Bd5	Bd5	c4 e4 f3 g2 h1 e6 pf7 c6 b7 a8
+Pe7,Pg7,Pe6,Pg5,Pd4,Ke4,Pf4,Pe3	Pf7,Pe6,Kf6,Pg6,Pd5,Pf5,Pd3,Pf3	Ke4	Pd3 Pf3 Pf5 Pd5
+Pe7,Pg7,Pe6,Pg5,Pd4,Ke4,Pf4,Pe3	Pf7,Pe6,Kf6,Pg6,Pd5,Pf5,Pd3,Pf3	Kf6	Pe5 Pg5 Pg7 Pe7
