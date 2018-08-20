@@ -16,4 +16,3 @@ for line in range(1, len(read_data)):
     print(s, flush=False)
     print(answers)
     print('==========================================================')
-

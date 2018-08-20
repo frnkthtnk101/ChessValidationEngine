@@ -26,3 +26,5 @@ Pd8,Pf7,Pb6,Ph5,Pa4,Pg3,Pc2,Pe1,Qc3,Be3	Pe8,Pc7,Pf6,Pa5,Ph4,Pb3,Pf2,Pd1,Qb5,Bd5	
 Pd8,Pf7,Pb6,Ph5,Pa4,Pg3,Pc2,Pe1,Qc3,Be3	Pe8,Pc7,Pf6,Pa5,Ph4,Pb3,Pf2,Pd1,Qb5,Bd5	Bd5	c4 e4 f3 g2 h1 e6 pf7 c6 b7 a8
 Pe7,Pg7,Pe6,Pg5,Pd4,Ke4,Pf4,Pe3	Pf7,Pe6,Kf6,Pg6,Pd5,Pf5,Pd3,Pf3	Ke4	Pd3 Pf3 Pf5 Pd5
 Pe7,Pg7,Pe6,Pg5,Pd4,Ke4,Pf4,Pe3	Pf7,Pe6,Kf6,Pg6,Pd5,Pf5,Pd3,Pf3	Kf6	Pe5 Pg5 Pg7 Pe7
+Pe7	Pb2	Pe7	e8
+Pe7	Pb2	Pb2	b1
