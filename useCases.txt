@@ -1,30 +1,29 @@
-white	Black	Piece	Results
-Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Pa4	a5 Pb5
-Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Pc4	Pc5 Pd5 pb5
-Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Pc3	
-Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Pe4	
-Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Pe8	
-Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Pf4	f5
-Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Pf2	f3
-Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Ph4	h5 Pg5
-Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Pe7	e6
-Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Pd6	
-Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Pb5	b4 pc4 pa4
-Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Pd5	Pd4 Pe4 Pc4
-Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Pe5	Pf4
-Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Pe1	
-Pa4,Pc4,Pc3,Pe4,Pe8,Pf4,Pf2,Ph4	Pe7,Pd6,Pb5,Pd5,Pe5,Pe1,Pg5	Pg5	g4 h4 f4
-Nh8,Pd8,Pf7,Pb6,Re5,Ph5,Pa4,Pg3,Pc2,Pe1,Nh1	Na8,Pe8,Pc7,Pf6,Pa5,Rd4,Ph4,Pb3,Pf2,Na1,Pd1	Nh8	g6
-Nh8,Pd8,Pf7,Pb6,Re5,Ph5,Pa4,Pg3,Pc2,Pe1,Nh1	Na8,Pe8,Pc7,Pf6,Pa5,Rd4,Ph4,Pb3,Pf2,Na1,Pd1	Re5	Pa5 b5 c5 d5 f5 g5 e4 e3 e2 e6 e7 Pe8
-Nh8,Pd8,Pf7,Pb6,Re5,Ph5,Pa4,Pg3,Pc2,Pe1,Nh1	Na8,Pe8,Pc7,Pf6,Pa5,Rd4,Ph4,Pb3,Pf2,Na1,Pd1	Nh1	Pf2
-Nh8,Pd8,Pf7,Pb6,Re5,Ph5,Pa4,Pg3,Pc2,Pe1,Nh1	Na8,Pe8,Pc7,Pf6,Pa5,Rd4,Ph4,Pb3,Pf2,Na1,Pd1	Na8	Pb6
-Nh8,Pd8,Pf7,Pb6,Re5,Ph5,Pa4,Pg3,Pc2,Pe1,Nh1	Na8,Pe8,Pc7,Pf6,Pa5,Rd4,Ph4,Pb3,Pf2,Na1,Pd1	Rd4	e4 f5 g5 c5 b5 Pa4 d3 d2 d5 d6 d7 Pd8
-Nh8,Pd8,Pf7,Pb6,Re5,Ph5,Pa4,Pg3,Pc2,Pe1,Nh1	Na8,Pe8,Pc7,Pf6,Pa5,Rd4,Ph4,Pb3,Pf2,Na1,Pd1	Na1	Pc2
-Pd8,Pf7,Pb6,Ph5,Pa4,Pg3,Pc2,Pe1,Qc3,Be3	Pe8,Pc7,Pf6,Pa5,Ph4,Pb3,Pf2,Pd1,Qb5,Bd5	Qc3	Pb3 b2 a1 b4 a5 c4 c5 c6 Pc7 d4 e5 f6 g7 h8 d3 d2
-Pd8,Pf7,Pb6,Ph5,Pa4,Pg3,Pc2,Pe1,Qc3,Be3	Pe8,Pc7,Pf6,Pa5,Ph4,Pb3,Pf2,Pd1,Qb5,Bd5	Be3	Pf2 d4 c5 d2 c1 f4 g5 h5
-Pd8,Pf7,Pb6,Ph5,Pa4,Pg3,Pc2,Pe1,Qc3,Be3	Pe8,Pc7,Pf6,Pa5,Ph4,Pb3,Pf2,Pd1,Qb5,Bd5	Qb5	Pa4 b4 c4 d3 e2 f1 d3 d4 e5 f6 g7 h8 c4 c5 c6 Pc7 Pa5
-Pd8,Pf7,Pb6,Ph5,Pa4,Pg3,Pc2,Pe1,Qc3,Be3	Pe8,Pc7,Pf6,Pa5,Ph4,Pb3,Pf2,Pd1,Qb5,Bd5	Bd5	c4 e4 f3 g2 h1 e6 pf7 c6 b7 a8
-Pe7,Pg7,Pe6,Pg5,Pd4,Ke4,Pf4,Pe3	Pf7,Pe6,Kf6,Pg6,Pd5,Pf5,Pd3,Pf3	Ke4	Pd3 Pf3 Pf5 Pd5
-Pe7,Pg7,Pe6,Pg5,Pd4,Ke4,Pf4,Pe3	Pf7,Pe6,Kf6,Pg6,Pd5,Pf5,Pd3,Pf3	Kf6	Pe5 Pg5 Pg7 Pe7
-Pe7	Pb2	Pe7	e8
-Pe7	Pb2	Pb2	b1
+White	black	piece	answer
+Ph2	Ph7	Ph2	h3 h4
+Ph2	Ph7	Ph7	h6 h5
+Pe4	Pe5	Pe4	
+Pe4	Pe5	Pe5	
+Pe4	Pd5,Pf5	Pe4	e5 Pd5 Pf5
+Pe4,Pg4	Pf5	Pf5	Pe4 Pg4 f4
+Pe7	Pf2	Pe7	e8
+Pe7	Pf2	Pf2	f1
+Ph8	Ph1	Ph8	
+Ph8	Ph1	Ph1	
+Ne4	Ne5	Ne4	f6 g5 d6 c5 f2 g3 d2 c3
+Ne4	Ne5	Ne5	f3 g4 f7 g6 d7 c6 c4 d3
+Ne4,Pf6	Ne5	Ne4	g5 d6 c5 f2 g3 d2 c3
+Ne4	Ne5,Pf6	Ne4	Pf6 g5 d6 c5 f2 g3 d2 c3
+Ne4,Pf3	Ne5	Ne5	Pf3 g4 f7 g6 d7 c6 c4 d3
+Ne4	Ne5,Pf3	Ne5	g4 f7 g6 d7 c6 c4 d3
+Bf4	Be4	Bf4	g3 h2 g5 h6 e3 d2 c1 e5 d6 c7 b8
+Bf4	Be4	Be4	f3 g2 h1 d3 c2 b1 f5 g6 h7 d5 c6 b7 a8
+Bf4,Pe3,Pd5	Be4,Pe5,Pf3	Bf4	Pe5 g5 h6 g3 h2
+Bf4,Pe3,Pd5	Be4,Pe5,Pf3	Be4	Pd5 b1 c2 d3 f5 g6 h7
+Re4	Ph1	Re4	e3 e2 e1 e7 e5 e6 e8 f4 g4 h4 d4 c4 b4 a4
+Ph1	Re4	Re4	e3 e2 e1 e7 e5 e6 e8 f4 g4 h4 d4 c4 b4 a4
+Re4,Pe3,Pe5	Pf4,Pd4	Re4	Pf4 Pd4
+Pf4,Pd4	Re4,Pe3,Pe5	Re4	Pf4 Pd4
+Ke4	Ph1	Ke4	e5 e3 d3 d4 d5 f3 f4 f5
+Ph1	Ke4	Ke4	e5 e3 d3 d4 d5 f3 f4 f5
+qh1,Pg1,Pg2	Ph2	qh1	Ph2
+Ph2	Kh1,Pg1,Pg2	Kh1	Ph2

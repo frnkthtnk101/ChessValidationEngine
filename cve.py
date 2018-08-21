@@ -27,14 +27,28 @@ class PIECES(Enum):
     N = 5
     P = 6
 
-CHESSBOARD = [['a8', 'b8', 'c8', 'd8', 'e8', 'f8', 'g8', 'h8'],
-              ['a7', 'b7', 'c7', 'd7', 'e7', 'f7', 'g7', 'h7'],
-              ['a6', 'b6', 'c6', 'd6', 'e6', 'f6', 'g6', 'h6'],
-              ['a5', 'b5', 'c5', 'd5', 'e5', 'f5', 'g5', 'h5'],
-              ['a4', 'b4', 'c4', 'd4', 'e4', 'f4', 'g4', 'h4'],
-              ['a3', 'b3', 'c3', 'd3', 'e3', 'f3', 'g3', 'h3'],
-              ['a2', 'b2', 'c2', 'd2', 'e2', 'f2', 'g2', 'h2'],
-              ['a1', 'b1', 'c1', 'd1', 'e1', 'f1', 'g1', 'h1']]
+CHESSBOARD = [['a8', 'b8', 'c8', 'd8', 'e8', 'f8', 'g8', 'h8'],#a 0
+              ['a7', 'b7', 'c7', 'd7', 'e7', 'f7', 'g7', 'h7'],#b 1
+              ['a6', 'b6', 'c6', 'd6', 'e6', 'f6', 'g6', 'h6'],#c 2
+              ['a5', 'b5', 'c5', 'd5', 'e5', 'f5', 'g5', 'h5'],#d 3
+              ['a4', 'b4', 'c4', 'd4', 'e4', 'f4', 'g4', 'h4'],#e 4
+              ['a3', 'b3', 'c3', 'd3', 'e3', 'f3', 'g3', 'h3'],#f 5
+              ['a2', 'b2', 'c2', 'd2', 'e2', 'f2', 'g2', 'h2'],#g 6
+              ['a1', 'b1', 'c1', 'd1', 'e1', 'f1', 'g1', 'h1']]#h 7
+#               0      1    2      3     4     5     6     7
+def reset_chessboard():
+    '''testing tool to reset chessboard'''
+    backup_chessboard = [['a8', 'b8', 'c8', 'd8', 'e8', 'f8', 'g8', 'h8'],
+                  ['a7', 'b7', 'c7', 'd7', 'e7', 'f7', 'g7', 'h7'],
+                  ['a6', 'b6', 'c6', 'd6', 'e6', 'f6', 'g6', 'h6'],
+                  ['a5', 'b5', 'c5', 'd5', 'e5', 'f5', 'g5', 'h5'],
+                  ['a4', 'b4', 'c4', 'd4', 'e4', 'f4', 'g4', 'h4'],
+                  ['a3', 'b3', 'c3', 'd3', 'e3', 'f3', 'g3', 'h3'],
+                  ['a2', 'b2', 'c2', 'd2', 'e2', 'f2', 'g2', 'h2'],
+                  ['a1', 'b1', 'c1', 'd1', 'e1', 'f1', 'g1', 'h1']]
+    for i in range(len(backup_chessboard)):
+        for j in range(len(backup_chessboard[0])):
+            CHESSBOARD[i][j] = backup_chessboard[i][j]
 
 def in_range(cord):
     '''determines if the given value is between or equal to 0 and 7'''
@@ -103,11 +117,13 @@ def pawn_capture(x_axis, y_axis, enemyteam):
 
 def pawn_special(x_axis, y_axis, yourteam, enemyteam):
     '''Function to check if the pawn has a special move'''
-    if 8 - y_axis == 6:
+    if 8 - y_axis == 6 and yourteam == 1:
+        #your team is there to make sure a white piece doen't double jump at row 7
         if in_piece_list(yourteam, CHESSBOARD[4][x_axis]) is False\
                 and in_piece_list(enemyteam, CHESSBOARD[4][x_axis]) is False:
             return CHESSBOARD[4][x_axis] + ' '
-    if 8 - y_axis == 1:
+    if 8 - y_axis == 1 and yourteam == -1:
+        # your team is there to make sure a black piece doen't double jump at row 2
         if in_piece_list(yourteam, CHESSBOARD[3][x_axis]) is False\
                 and in_piece_list(enemyteam, CHESSBOARD[3][x_axis]) is False:
             return CHESSBOARD[3][x_axis] + ' '
@@ -160,7 +176,7 @@ def king_movement(x_axis, y_axis, yourteam, enemyteam, point=0):
     increment = [[0, 1], [0, -1], [1, 0], [1, 1], [1, -1],
                  [-1, 0], [-1, 1], [-1, -1]]
     if point < len(increment):
-        if in_range(x_axis + increment[point][0]) and in_range(y_axis + increment[point][1]):
+        if in_range((x_axis + increment[point][0])) and in_range((y_axis + increment[point][1])):
             if in_piece_list(yourteam,
                              CHESSBOARD[y_axis + increment[point][1]]
                              [x_axis + increment[point][0]]):
@@ -183,7 +199,7 @@ def fix_chessboard(pieces):
         plsplit = list(s_piece)
         CHESSBOARD[8 - int(plsplit[2])][give_column_number(plsplit[1])] = s_piece
 
-def main(white_pieces, black_pieces, piece_to_move, Print_chessboard):
+def main(white_pieces, black_pieces, piece_to_move, print_chessboard_option,regular = False):
     '''the main function of the script'''
     #under normal circumstances WHITE_PIECES and BLACK_PIECES are normally GLOBAL,
     #but when they are being tested, They are not.
@@ -192,7 +208,7 @@ def main(white_pieces, black_pieces, piece_to_move, Print_chessboard):
     BLACK_PIECES = black_pieces
     fix_chessboard(white_pieces)
     fix_chessboard(black_pieces)
-    print_chessboard(Print_chessboard)
+    print_chessboard(print_chessboard_option)
     # decide if the piece moving is black or white
     if ''.join(piece_to_move) in white_pieces:
         piece_movement_team = 1
@@ -207,45 +223,94 @@ def main(white_pieces, black_pieces, piece_to_move, Print_chessboard):
     results = "Moves: "
     # pawn
     if piece_to_move[0] is PIECES.P.name:
-        results += pawn_movement(piece_x_axis, 8 - (piece_y_axis + piece_movement_team),piece_movement_team,enemy_team)
-        results +=pawn_capture(piece_x_axis + 1, 8- (piece_y_axis + piece_movement_team),enemy_team)
-        results +=pawn_capture(piece_x_axis - 1, 8 - (piece_y_axis + piece_movement_team),enemy_team)
-        results +=pawn_special(piece_x_axis, piece_y_axis, piece_movement_team, enemy_team)
+        results += pawn_movement(piece_x_axis,
+                                 8 - (piece_y_axis +piece_movement_team), piece_movement_team,
+                                 enemy_team)
+        results += pawn_capture(piece_x_axis + 1,
+                                8- (piece_y_axis +piece_movement_team), enemy_team)
+        results += pawn_capture(piece_x_axis - 1,
+                               8 - (piece_y_axis + piece_movement_team), enemy_team)
+        results += pawn_special(piece_x_axis, piece_y_axis, piece_movement_team, enemy_team)
 
     # knight
     elif piece_to_move[0] is PIECES.N.name:
-        results +=knight_movement(piece_x_axis + 1, piece_y_axis + (piece_movement_team * 2),piece_movement_team)
-        results +=knight_movement(piece_x_axis - 1, piece_y_axis + (piece_movement_team * 2),piece_movement_team)
-        results +=knight_movement(piece_x_axis + 1, piece_y_axis + (piece_movement_team * -2),piece_movement_team)
-        results +=knight_movement(piece_x_axis - 1, piece_y_axis + (piece_movement_team * -2),piece_movement_team)
-        results +=knight_movement(piece_x_axis + 2, piece_y_axis + (piece_movement_team * 1),piece_movement_team)
-        results +=knight_movement(piece_x_axis - 2, piece_y_axis + (piece_movement_team * 1),piece_movement_team)
-        results +=knight_movement(piece_x_axis + 2, piece_y_axis + (piece_movement_team * -1),piece_movement_team)
-        results +=knight_movement(piece_x_axis - 2, piece_y_axis + (piece_movement_team * -1),piece_movement_team)
+        if piece_movement_team == 1: #white pieces go normally
+            results += knight_movement(piece_x_axis + 1, piece_y_axis +
+                                       (piece_movement_team * 2), piece_movement_team)
+            results += knight_movement(piece_x_axis - 1, piece_y_axis +
+                                       (piece_movement_team * 2), piece_movement_team)
+            results += knight_movement(piece_x_axis + 1, piece_y_axis +
+                                       (piece_movement_team * -2), piece_movement_team)
+            results += knight_movement(piece_x_axis - 1, piece_y_axis +
+                                       (piece_movement_team * -2), piece_movement_team)
+            results += knight_movement(piece_x_axis + 2, piece_y_axis +
+                                       (piece_movement_team * 1), piece_movement_team)
+            results += knight_movement(piece_x_axis - 2, piece_y_axis +
+                                       (piece_movement_team * 1), piece_movement_team)
+            results += knight_movement(piece_x_axis + 2, piece_y_axis +
+                                       (piece_movement_team * -1), piece_movement_team)
+            results += knight_movement(piece_x_axis - 2, piece_y_axis +
+                                       (piece_movement_team * -1), piece_movement_team)
+        else: #black pieces go reverse
+            results += knight_movement(piece_x_axis + 1, 8 - (piece_y_axis +
+                                       (piece_movement_team * 2)), piece_movement_team)
+            results += knight_movement(piece_x_axis - 1, 8 - (piece_y_axis +
+                                       (piece_movement_team * 2)), piece_movement_team)
+            results += knight_movement(piece_x_axis + 1, 8 -(piece_y_axis +
+                                       (piece_movement_team * -2)), piece_movement_team)
+            results += knight_movement(piece_x_axis - 1, 8 - (piece_y_axis +
+                                       (piece_movement_team * -2)), piece_movement_team)
+            results += knight_movement(piece_x_axis + 2, 8 - (piece_y_axis +
+                                       (piece_movement_team * 1)), piece_movement_team)
+            results += knight_movement(piece_x_axis - 2, 8 - (piece_y_axis +
+                                       (piece_movement_team * 1)), piece_movement_team)
+            results += knight_movement(piece_x_axis + 2, 8 - (piece_y_axis +
+                                       (piece_movement_team * -1)), piece_movement_team)
+            results += knight_movement(piece_x_axis - 2, 8 - (piece_y_axis +
+                                       (piece_movement_team * -1)), piece_movement_team)
+
     # Rook
     elif piece_to_move[0] is PIECES.R.name:
-        results +=rook_movement(piece_x_axis, piece_y_axis, 'x', 1, piece_movement_team, enemy_team)
-        results +=rook_movement(piece_x_axis, piece_y_axis, 'x', -1, piece_movement_team, enemy_team)
-        results +=rook_movement(piece_x_axis, piece_y_axis, 'y', 1, piece_movement_team, enemy_team)
-        results +=rook_movement(piece_x_axis, piece_y_axis, 'y', -1, piece_movement_team, enemy_team)
+        results += rook_movement(piece_x_axis, piece_y_axis, 'x', 1,
+                                 piece_movement_team, enemy_team) +' '
+        results += rook_movement(piece_x_axis, piece_y_axis, 'x', -1,
+                                 piece_movement_team, enemy_team) +' '
+        results += rook_movement(piece_x_axis, piece_y_axis, 'y', 1,
+                                 piece_movement_team, enemy_team) +' '
+        results += rook_movement(piece_x_axis, piece_y_axis, 'y', -1,
+                                 piece_movement_team, enemy_team) +' '
     # Bishop
     elif piece_to_move[0] is PIECES.B.name:
-        results +=bishop_movement(piece_x_axis, piece_y_axis, 1, 1, piece_movement_team, enemy_team)
-        results +=bishop_movement(piece_x_axis, piece_y_axis, 1, -1, piece_movement_team, enemy_team)
-        results +=bishop_movement(piece_x_axis, piece_y_axis, -1, 1, piece_movement_team, enemy_team)
-        results +=bishop_movement(piece_x_axis, piece_y_axis, -1, -1, piece_movement_team, enemy_team)
+        results += bishop_movement(piece_x_axis, piece_y_axis, 1, 1,
+                                   piece_movement_team, enemy_team)
+        results += bishop_movement(piece_x_axis, piece_y_axis, 1, -1,
+                                   piece_movement_team, enemy_team)
+        results += bishop_movement(piece_x_axis, piece_y_axis, -1, 1,
+                                   piece_movement_team, enemy_team)
+        results += bishop_movement(piece_x_axis, piece_y_axis, -1, -1,
+                                   piece_movement_team, enemy_team)
     elif piece_to_move[0] is PIECES.Q.name:
-        results +=rook_movement(piece_x_axis, piece_y_axis, 'x', 1, piece_movement_team, enemy_team) + ' '
-        results +=rook_movement(piece_x_axis, piece_y_axis, 'x', -1, piece_movement_team, enemy_team) + ' '
-        results +=rook_movement(piece_x_axis, piece_y_axis, 'y', 1, piece_movement_team, enemy_team) + ' '
-        results +=rook_movement(piece_x_axis, piece_y_axis, 'y', -1, piece_movement_team, enemy_team) + ' '
-        results +=bishop_movement(piece_x_axis, piece_y_axis, 1, 1, piece_movement_team, enemy_team) + ' '
-        results +=bishop_movement(piece_x_axis, piece_y_axis, 1, -1, piece_movement_team, enemy_team) + ' '
-        results +=bishop_movement(piece_x_axis, piece_y_axis, -1, 1, piece_movement_team, enemy_team) + ' '
-        results +=bishop_movement(piece_x_axis, piece_y_axis, -1, -1, piece_movement_team, enemy_team) + ' '
+        results += rook_movement(piece_x_axis, piece_y_axis, 'x',
+                                 1, piece_movement_team, enemy_team) + ' '
+        results += rook_movement(piece_x_axis, piece_y_axis, 'x', -1,
+                                 piece_movement_team, enemy_team) + ' '
+        results += rook_movement(piece_x_axis, piece_y_axis, 'y', 1,
+                                 piece_movement_team, enemy_team) + ' '
+        results += rook_movement(piece_x_axis, piece_y_axis, 'y', -1,
+                                 piece_movement_team, enemy_team) + ' '
+        results += bishop_movement(piece_x_axis, piece_y_axis, 1, 1,
+                                   piece_movement_team, enemy_team) + ' '
+        results += bishop_movement(piece_x_axis, piece_y_axis, 1, -1,
+                                   piece_movement_team, enemy_team) + ' '
+        results += bishop_movement(piece_x_axis, piece_y_axis, -1, 1,
+                                   piece_movement_team, enemy_team) + ' '
+        results += bishop_movement(piece_x_axis, piece_y_axis, -1, -1,
+                                   piece_movement_team, enemy_team) + ' '
     elif piece_to_move[0] is PIECES.K.name:
-        results += king_movement(piece_x_axis, piece_y_axis, piece_movement_team, enemy_team)
-    print(results)
+        results += king_movement(piece_x_axis, piece_y_axis,
+                                 piece_movement_team, enemy_team)
+    if regular == True:
+        print(results.strip())
     return results
 
 if __name__ == "__main__":
@@ -262,6 +327,6 @@ if __name__ == "__main__":
         BLACK_PIECES = ARGS.black.split(',')
         PIECE_TO_MOVE = list(ARGS.piece)
         PRINTCB = ARGS.chessboard
-        main(WHITE_PIECES, BLACK_PIECES, PIECE_TO_MOVE, PRINTCB)
+        main(WHITE_PIECES, BLACK_PIECES, PIECE_TO_MOVE, PRINTCB,True)
     else:
         raise ValueError("One of the paramaters was out of format")
