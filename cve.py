@@ -176,7 +176,9 @@ def king_movement(x_axis, y_axis, yourteam, enemyteam, point=0):
     increment = [[0, 1], [0, -1], [1, 0], [1, 1], [1, -1],
                  [-1, 0], [-1, 1], [-1, -1]]
     if point < len(increment):
-        if in_range((x_axis + increment[point][0])) and in_range((y_axis + increment[point][1])):
+        x = x_axis + increment[point][0]
+        y = y_axis + increment[point][1]
+        if in_range(x_axis + increment[point][0]) and in_range(y_axis + increment[point][1]):
             if in_piece_list(yourteam,
                              CHESSBOARD[y_axis + increment[point][1]]
                              [x_axis + increment[point][0]]):
@@ -185,6 +187,7 @@ def king_movement(x_axis, y_axis, yourteam, enemyteam, point=0):
                    king_movement(x_axis, y_axis, yourteam, enemyteam, point + 1)
         return king_movement(x_axis, y_axis, yourteam, enemyteam, point + 1)
     return ''
+
 
 def print_chessboard(do_print):
     '''print chessboard if so bee'''
@@ -271,43 +274,44 @@ def main(white_pieces, black_pieces, piece_to_move, print_chessboard_option,regu
 
     # Rook
     elif piece_to_move[0] is PIECES.R.name:
-        results += rook_movement(piece_x_axis, piece_y_axis, 'x', 1,
+        results += rook_movement(piece_x_axis, 8 - piece_y_axis, 'x', 1,
                                  piece_movement_team, enemy_team) +' '
-        results += rook_movement(piece_x_axis, piece_y_axis, 'x', -1,
+        results += rook_movement(piece_x_axis, 8 - piece_y_axis, 'x', -1,
                                  piece_movement_team, enemy_team) +' '
-        results += rook_movement(piece_x_axis, piece_y_axis, 'y', 1,
+        results += rook_movement(piece_x_axis, 8 - piece_y_axis, 'y', 1,
                                  piece_movement_team, enemy_team) +' '
-        results += rook_movement(piece_x_axis, piece_y_axis, 'y', -1,
+        results += rook_movement(piece_x_axis, 8 - piece_y_axis, 'y', -1,
                                  piece_movement_team, enemy_team) +' '
     # Bishop
-    elif piece_to_move[0] is PIECES.B.name:
-        results += bishop_movement(piece_x_axis, piece_y_axis, 1, 1,
+    elif piece_to_move[0] is PIECES.B.name: #test show we needed to reverse the y
+        results += bishop_movement(piece_x_axis, 8 - piece_y_axis, 1, 1,
                                    piece_movement_team, enemy_team)
         results += bishop_movement(piece_x_axis, piece_y_axis, 1, -1,
+                                   piece_movement_team, 8 -enemy_team)
+        results += bishop_movement(piece_x_axis, 8-piece_y_axis, -1, 1,
                                    piece_movement_team, enemy_team)
-        results += bishop_movement(piece_x_axis, piece_y_axis, -1, 1,
+        results += bishop_movement(piece_x_axis, 8-piece_y_axis, -1, -1,
                                    piece_movement_team, enemy_team)
-        results += bishop_movement(piece_x_axis, piece_y_axis, -1, -1,
-                                   piece_movement_team, enemy_team)
-    elif piece_to_move[0] is PIECES.Q.name:
-        results += rook_movement(piece_x_axis, piece_y_axis, 'x',
+    elif piece_to_move[0] is PIECES.Q.name: #test show we needed to reverse the y
+        results += rook_movement(piece_x_axis, 8-piece_y_axis, 'x',
                                  1, piece_movement_team, enemy_team) + ' '
-        results += rook_movement(piece_x_axis, piece_y_axis, 'x', -1,
+        results += rook_movement(piece_x_axis, 8-piece_y_axis, 'x', -1,
                                  piece_movement_team, enemy_team) + ' '
-        results += rook_movement(piece_x_axis, piece_y_axis, 'y', 1,
+        results += rook_movement(piece_x_axis, 8-piece_y_axis, 'y', 1,
                                  piece_movement_team, enemy_team) + ' '
-        results += rook_movement(piece_x_axis, piece_y_axis, 'y', -1,
+        results += rook_movement(piece_x_axis, 8-piece_y_axis, 'y', -1,
                                  piece_movement_team, enemy_team) + ' '
-        results += bishop_movement(piece_x_axis, piece_y_axis, 1, 1,
+        results += bishop_movement(piece_x_axis, 8 - piece_y_axis, 1, 1,
                                    piece_movement_team, enemy_team) + ' '
-        results += bishop_movement(piece_x_axis, piece_y_axis, 1, -1,
+        results += bishop_movement(piece_x_axis, 8 - piece_y_axis, 1, -1,
                                    piece_movement_team, enemy_team) + ' '
-        results += bishop_movement(piece_x_axis, piece_y_axis, -1, 1,
+        results += bishop_movement(piece_x_axis, 8 - piece_y_axis, -1, 1,
                                    piece_movement_team, enemy_team) + ' '
-        results += bishop_movement(piece_x_axis, piece_y_axis, -1, -1,
+        results += bishop_movement(piece_x_axis, 8 - piece_y_axis, -1, -1,
                                    piece_movement_team, enemy_team) + ' '
     elif piece_to_move[0] is PIECES.K.name:
-        results += king_movement(piece_x_axis, piece_y_axis,
+     #need to subtract by 8 of the program will wrap the chess board
+        results += king_movement(piece_x_axis, 8 -piece_y_axis,
                                  piece_movement_team, enemy_team)
     if regular == True:
         print(results.strip())

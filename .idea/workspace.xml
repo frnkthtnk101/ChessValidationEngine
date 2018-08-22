@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="628fd383-50b5-432e-8652-34bd9245b185" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cve.py" beforeDir="false" afterPath="$PROJECT_DIR$/cve.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-cve.py" beforeDir="false" afterPath="$PROJECT_DIR$/test-cve.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/useCases.txt" beforeDir="false" afterPath="$PROJECT_DIR$/useCases.txt" afterDir="false" />
@@ -15,8 +14,8 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/ChessValidationEngine$test_cve.coverage" NAME="test-cve Coverage Results" MODIFIED="1534733397897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ChessValidationEngine$test_cve__1_.coverage" NAME="test-cve (1) Coverage Results" MODIFIED="1534819971589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ChessValidationEngine$cve.coverage" NAME="cve Coverage Results" MODIFIED="1534817911608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ChessValidationEngine$test_cve__1_.coverage" NAME="test-cve (1) Coverage Results" MODIFIED="1534899606303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ChessValidationEngine$cve.coverage" NAME="cve Coverage Results" MODIFIED="1534897030373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -49,7 +48,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cfg" value="2" />
-          <entry key="py" value="10176" />
+          <entry key="py" value="10461" />
           <entry key="test-cve" value="367" />
           <entry key="txt" value="80" />
         </counts>
@@ -58,14 +57,14 @@
         <counts>
           <entry key="Ini" value="2" />
           <entry key="PLAIN_TEXT" value="80" />
-          <entry key="Python" value="10543" />
+          <entry key="Python" value="10828" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Requirements" value="1" />
           <entry key="cfg" value="1" />
-          <entry key="py" value="12" />
+          <entry key="py" value="13" />
           <entry key="swp" value="1" />
           <entry key="test-cve" value="1" />
           <entry key="txt" value="4" />
@@ -75,20 +74,26 @@
         <counts>
           <entry key="Ini" value="1" />
           <entry key="PLAIN_TEXT" value="6" />
-          <entry key="Python" value="13" />
+          <entry key="Python" value="14" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test-cve.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cve.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+            <state relative-caret-position="122">
+              <caret line="61" column="17" lean-forward="true" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#100#121#0" expanded="true" />
+                <marker date="1534899510055" expanded="true" signature="1887:1888" ph="..." />
               </folding>
             </state>
           </provider>
@@ -155,8 +160,8 @@
         <option value="$PROJECT_DIR$/venv/pyvenv.cfg" />
         <option value="$PROJECT_DIR$/test-cve" />
         <option value="$PROJECT_DIR$/useCases.txt" />
-        <option value="$PROJECT_DIR$/test-cve.py" />
         <option value="$PROJECT_DIR$/cve.py" />
+        <option value="$PROJECT_DIR$/test-cve.py" />
       </list>
     </option>
   </component>
@@ -249,7 +254,7 @@
       <option name="ADD_SOURCE_ROOTS" value="false" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cve.py" />
-      <option name="PARAMETERS" value="Ne4 Ne5 Ne5 --chessboard 1" />
+      <option name="PARAMETERS" value="Kh1 Ne5 Kh1 --chessboard 1" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -372,24 +377,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test-cve.py</url>
-          <line>25</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/cve.py</url>
-          <line>133</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/cve.py</url>
-          <line>237</line>
+          <line>240</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/cve.py</url>
-          <line>175</line>
-          <option name="timeStamp" value="17" />
+          <line>313</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -459,23 +454,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test-cve.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/cve.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="53" column="70" lean-forward="true" selection-start-line="53" selection-start-column="70" selection-end-line="53" selection-end-column="70" />
+        <state relative-caret-position="122">
+          <caret line="61" column="17" lean-forward="true" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
           <folding>
             <element signature="e#100#121#0" expanded="true" />
-            <marker date="1534819691083" expanded="true" signature="1887:1888" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test-cve.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1534899510055" expanded="true" signature="1887:1888" ph="..." />
           </folding>
         </state>
       </provider>

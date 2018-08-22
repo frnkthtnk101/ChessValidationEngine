@@ -1,4 +1,3 @@
-import os
 from cve import *
 with open('useCases.txt', 'r') as file:
     read_data = file.readlines()
@@ -9,7 +8,6 @@ for line in range(1, len(read_data)):
     whites = params[0].split(',')
     WHITE_PIECES = params[0].split(',')
     blacks = params[1].split(',')
-    #globals( BLACK_PIECES = params[1].split(','))
     piece = list(params[2])
     answers =  params[3].split(' ')
     print('==========================================================')
